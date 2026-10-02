@@ -1,0 +1,40 @@
+{
+  "name": "minidayz-cangshu-pc",
+  "version": "2.3.3-desktop.1",
+  "description": "Offline MiniDayZ Cangshu desktop",
+  "main": "desktop/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "capture": "node scripts/capture-site.js",
+    "audit": "node scripts/audit-assets.js",
+    "test:offline": "node scripts/test-offline.js",
+    "test:save": "node scripts/test-save-persistence.js",
+    "build:win": "electron-builder --win portable --x64"
+  },
+  "build": {
+    "appId": "info.moyu.minidayz.cangshu.pc",
+    "productName": "MiniDayZ Cangshu PC",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "desktop/**/*",
+      "game/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "portable"
+      ],
+      "artifactName": "MiniDayZ-Cangshu-v2.3.3-x64.exe"
+    },
+    "electronDist": "node_modules/electron/dist"
+  },
+  "devDependencies": {
+    "electron": "44.5.1",
+    "electron-builder": "26.15.3",
+    "playwright": "1.63.0"
+  },
+  "author": "MiniDayZ Cangshu PC"
+}

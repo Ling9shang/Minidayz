@@ -1,0 +1,132 @@
+[
+  {
+    "file": "game\\c2runtime.js",
+    "offset": 63,
+    "match": "https://www.construct.net"
+  },
+  {
+    "file": "game\\c2runtime.js",
+    "offset": 46233,
+    "match": "XMLHttpRequest"
+  },
+  {
+    "file": "game\\c2runtime.js",
+    "offset": 160221,
+    "match": "XMLHttpRequest"
+  },
+  {
+    "file": "game\\c2runtime.js",
+    "offset": 172389,
+    "match": "XMLHttpRequest"
+  },
+  {
+    "file": "game\\c2runtime.js",
+    "offset": 218373,
+    "match": "XMLHttpRequest"
+  },
+  {
+    "file": "game\\data.js",
+    "offset": 12221643,
+    "match": "https://www.facebook.com/MINIDAYZGAME/"
+  },
+  {
+    "file": "game\\data.js",
+    "offset": 12221860,
+    "match": "https://vk.com/mini_dayz"
+  },
+  {
+    "file": "game\\data.js",
+    "offset": 12407025,
+    "match": "https://account.bistudio.com/api/user?access_token="
+  },
+  {
+    "file": "game\\data.js",
+    "offset": 12407769,
+    "match": "https://account.bistudio.com/api/user?access_token="
+  },
+  {
+    "file": "game\\data.js",
+    "offset": 12408214,
+    "match": "https://account.bistudio.com/api/oauth/token"
+  },
+  {
+    "file": "game\\data.js",
+    "offset": 12410042,
+    "match": "https://account.bistudio.com/api/user?access_token="
+  },
+  {
+    "file": "game\\data.js",
+    "offset": 12411069,
+    "match": "https://store.bistudio.com/products/minidayz"
+  },
+  {
+    "file": "game\\data.js",
+    "offset": 12411887,
+    "match": "https://account.bistudio.com/api/oauth/token"
+  },
+  {
+    "file": "game\\data.js",
+    "offset": 12413626,
+    "match": "https://account.bistudio.com/api/oauth/token"
+  },
+  {
+    "file": "game\\data.js",
+    "offset": 12414701,
+    "match": "https://account.bistudio.com"
+  },
+  {
+    "file": "game\\data.js",
+    "offset": 12415126,
+    "match": "https://store.bistudio.com/products/minidayz"
+  },
+  {
+    "file": "game\\data.js",
+    "offset": 12418573,
+    "match": "https://account.bistudio.com/api/user?access_token="
+  },
+  {
+    "file": "game\\index.html",
+    "offset": 2411,
+    "match": "http://www.whatbrowser.org"
+  },
+  {
+    "file": "game\\index.html",
+    "offset": 2485,
+    "match": "http://www.microsoft.com/windows/internet-explorer/default.aspx"
+  },
+  {
+    "file": "game\\index.html",
+    "offset": 2600,
+    "match": "http://www.mozilla.com/firefox/"
+  },
+  {
+    "file": "game\\index.html",
+    "offset": 2671,
+    "match": "http://www.google.com/chrome/"
+  },
+  {
+    "file": "game\\index.html",
+    "offset": 2738,
+    "match": "http://www.apple.com/safari/download/"
+  },
+  {
+    "file": "game\\index.html",
+    "offset": 3809,
+    "match": "<script src=\"jquery-3.4.1.min.js\""
+  },
+  {
+    "file": "game\\index.html",
+    "offset": 4071,
+    "match": "<script src=\"c2runtime.js\""
+  },
+  {
+    "file": "game\\jquery-3.4.1.min.js",
+    "offset": 80475,
+    "match": "XMLHttpRequest"
+  },
+  {
+    "file": "game\\jquery-3.4.1.min.js",
+    "offset": 80950,
+    "match": "XMLHttpRequest"
+  }
+]

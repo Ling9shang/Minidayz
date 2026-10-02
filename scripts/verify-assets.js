@@ -1,0 +1,4 @@
+const fs=require('fs'),path=require('path'),crypto=require('crypto');const files=[],errors=[];
+function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const f=path.join(dir,e.name);if(e.isDirectory())walk(f);else{const b=fs.readFileSync(f);if(!b.length)errors.push(f+': empty');if(f.endsWith('.png')&&b.subarray(0,8).toString('hex')!=='89504e470d0a1a0a')errors.push(f+': invalid PNG header');if(f.endsWith('.ogg')&&b.subarray(0,4).toString()!=='OggS')errors.push(f+': invalid OGG header');files.push({file:f,size:b.length,sha256:crypto.createHash('sha256').update(b).digest('hex')});}}}
+walk('game');JSON.parse(fs.readFileSync('game/data.js','utf8').replace(/^\uFEFF/,''));
+fs.writeFileSync('reports/asset-integrity.json',JSON.stringify({files,errors,scope:'JSON parse and file signatures; not exhaustive media decode'},null,2));console.log(files.length,'assets;',errors.length,'signature errors');if(errors.length)process.exitCode=1;

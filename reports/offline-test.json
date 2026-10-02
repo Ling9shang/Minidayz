@@ -1,0 +1,9 @@
+{
+  "errors": [],
+  "externalRequests": [],
+  "storage": {
+    "localStorage": [],
+    "indexedDB": "object"
+  },
+  "scope": "Startup screenshot only; gameplay requires further verification"
+}

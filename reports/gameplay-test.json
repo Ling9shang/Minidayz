@@ -1,0 +1,14 @@
+{
+  "portable": true,
+  "errors": [
+    "app://minidayz/mdz-cangshu-v233/media/menu_click.ogg"
+  ],
+  "criticalErrors": [],
+  "knownUpstream404": "media/menu_click.ogg is also HTTP 404 on the public original",
+  "saveBytes": 912433,
+  "beforeHash": "4075b83bc5565c05e1d0cc9d3dc0c02c96cfa31501f2e96d677a52728f16f33c",
+  "afterHash": "4075b83bc5565c05e1d0cc9d3dc0c02c96cfa31501f2e96d677a52728f16f33c",
+  "beforeFlag": null,
+  "afterFlag": null,
+  "passed": true
+}

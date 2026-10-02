@@ -1,0 +1,8 @@
+node_modules/
+.cache/
+release/
+reports/test-profile/
+reports/offline-profile/
+reports/gameplay-profile/
+reports/sequential-gameplay-profile/
+reports/portable-profile/
