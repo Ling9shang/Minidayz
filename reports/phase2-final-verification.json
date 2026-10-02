@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "version": "2.3.3-desktop.2",
+  "platform": "Windows 11 x64 10.0.26200",
+  "exe": "F:\\Game\\MiniDayZ-Cangshu-PC\\release\\MiniDayZ-Cangshu-v2.3.3-x64.exe",
+  "exeBytes": 113273950,
+  "sha256": "c0496fad17b7a9f1025d65097b8155d4d667d6c6da3c33ef0346cd8c71b7b440",
+  "phase1Tag": "v2.3.3-desktop-phase1",
+  "phase1Commit": "6dcf5729430b7b47a1b9a86f98683fc51e3ea4f7",
+  "originalFiles": {
+    "game/data.js": {
+      "phase1": "5f43a34bb0c8f4581e03913393069dde70220432",
+      "current": "5f43a34bb0c8f4581e03913393069dde70220432"
+    },
+    "game/c2runtime.js": {
+      "phase1": "98ced8c7b4e27f5cbd4901bc177daa060d351619",
+      "current": "98ced8c7b4e27f5cbd4901bc177daa060d351619"
+    }
+  },
+  "phase1TrackedChanges": "",
+  "packagedFiles": {
+    "desktop/main.js": true,
+    "desktop/config.json": true,
+    "desktop/injections/keyboard-controls.js": true,
+    "game/data.js": true,
+    "game/c2runtime.js": true,
+    "packageMetadata": true
+  },
+  "testResults": {
+    "keyboardDev": true,
+    "keyboardPortable": true,
+    "actionsDev": true,
+    "actionsPortable": true,
+    "offline": true,
+    "storage": true,
+    "gameplay": true,
+    "compatibility": true,
+    "disable": true,
+    "fullscreen": true
+  },
+  "externalConfigLeftBehind": false
+}

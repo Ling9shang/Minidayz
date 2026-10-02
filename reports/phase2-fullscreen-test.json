@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "environment": "Electron source entry",
+  "method": "native webContents input; BrowserWindow.isFullScreen",
+  "initial": false,
+  "f11": true,
+  "restored": false,
+  "altEnter": true,
+  "final": false
+}

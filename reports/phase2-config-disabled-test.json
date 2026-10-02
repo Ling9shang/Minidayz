@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "portable": true,
+  "configuration": "EXE-side desktop-config.json",
+  "injected": false,
+  "inventory": 1,
+  "mouseMoves": true,
+  "mouseEvidence": {
+    "target": {
+      "before": {
+        "x": 600,
+        "y": 6718
+      },
+      "x": 720,
+      "y": 462
+    },
+    "after": {
+      "x": 681.2200000000039,
+      "y": 6718
+    }
+  }
+}

@@ -1,0 +1,917 @@
+{
+  "environment": "portable",
+  "checks": [
+    {
+      "name": "main menu isolation",
+      "pass": true,
+      "evidence": {
+        "state": "MENU",
+        "movement": {
+          "up": false,
+          "down": false,
+          "left": false,
+          "right": false
+        },
+        "attack": false,
+        "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+        "lastAction": "",
+        "nativeMovement": null,
+        "position": null
+      }
+    },
+    {
+      "name": "new game",
+      "pass": true,
+      "evidence": {
+        "state": "GAMEPLAY",
+        "movement": {
+          "up": false,
+          "down": false,
+          "left": false,
+          "right": false
+        },
+        "attack": false,
+        "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+        "lastAction": "",
+        "nativeMovement": null,
+        "position": {
+          "x": 600,
+          "y": 6616
+        }
+      }
+    },
+    {
+      "name": "w",
+      "pass": true,
+      "evidence": {
+        "dx": 0,
+        "dy": -27.727058000000397
+      }
+    },
+    {
+      "name": "w keyup stop",
+      "pass": true,
+      "evidence": {
+        "released": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 600,
+            "y": 6587.6829419999995,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 600,
+            "y": 6587.6829419999995
+          }
+        },
+        "stopped": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 600,
+            "y": 6587.6829419999995,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 600,
+            "y": 6587.6829419999995
+          }
+        }
+      }
+    },
+    {
+      "name": "a",
+      "pass": true,
+      "evidence": {
+        "dx": -28.316720000000714,
+        "dy": 0
+      }
+    },
+    {
+      "name": "a keyup stop",
+      "pass": true,
+      "evidence": {
+        "released": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 571.0732799999994,
+            "y": 6587.6829419999995,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 571.0732799999994,
+            "y": 6587.6829419999995
+          }
+        },
+        "stopped": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 571.0732799999994,
+            "y": 6587.6829419999995,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 571.0732799999994,
+            "y": 6587.6829419999995
+          }
+        }
+      }
+    },
+    {
+      "name": "s",
+      "pass": true,
+      "evidence": {
+        "dx": 0,
+        "dy": 27.717114000004585
+      }
+    },
+    {
+      "name": "s keyup stop",
+      "pass": true,
+      "evidence": {
+        "released": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 571.0732799999994,
+            "y": 6616.010056000004,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 571.0732799999994,
+            "y": 6616.010056000004
+          }
+        },
+        "stopped": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 571.0732799999994,
+            "y": 6616.010056000004,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 571.0732799999994,
+            "y": 6616.010056000004
+          }
+        }
+      }
+    },
+    {
+      "name": "d",
+      "pass": true,
+      "evidence": {
+        "dx": 27.726920000000746,
+        "dy": 0
+      }
+    },
+    {
+      "name": "d keyup stop",
+      "pass": true,
+      "evidence": {
+        "released": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 599.4102,
+            "y": 6616.010056000004,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 599.4102,
+            "y": 6616.010056000004
+          }
+        },
+        "stopped": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 599.4102,
+            "y": 6616.010056000004,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 599.4102,
+            "y": 6616.010056000004
+          }
+        }
+      }
+    },
+    {
+      "name": "w+a",
+      "pass": true,
+      "evidence": {
+        "dx": -21.33094144377401,
+        "dy": -21.330941443768097
+      }
+    },
+    {
+      "name": "w+a keyup stop",
+      "pass": true,
+      "evidence": {
+        "released": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 576.7153119846574,
+            "y": 6593.476778001296,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 576.7153119846574,
+            "y": 6593.476778001296
+          }
+        },
+        "stopped": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 576.7153119846574,
+            "y": 6593.476778001296,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 576.7153119846574,
+            "y": 6593.476778001296
+          }
+        }
+      }
+    },
+    {
+      "name": "w+d",
+      "pass": true,
+      "evidence": {
+        "dx": 21.324101308150603,
+        "dy": -21.324101308144236
+      }
+    },
+    {
+      "name": "w+d keyup stop",
+      "pass": true,
+      "evidence": {
+        "released": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 598.9136235959616,
+            "y": 6571.316558548521,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 598.9136235959616,
+            "y": 6571.316558548521
+          }
+        },
+        "stopped": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 598.9136235959616,
+            "y": 6571.316558548521,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 598.9136235959616,
+            "y": 6571.316558548521
+          }
+        }
+      }
+    },
+    {
+      "name": "s+a",
+      "pass": true,
+      "evidence": {
+        "dx": -21.330959443774418,
+        "dy": 21.330959443767824
+      }
+    },
+    {
+      "name": "s+a keyup stop",
+      "pass": true,
+      "evidence": {
+        "released": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 576.7219693748855,
+            "y": 6593.46882257967,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 576.7219693748855,
+            "y": 6593.46882257967
+          }
+        },
+        "stopped": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 576.7219693748855,
+            "y": 6593.46882257967,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 576.7219693748855,
+            "y": 6593.46882257967
+          }
+        }
+      }
+    },
+    {
+      "name": "s+d",
+      "pass": true,
+      "evidence": {
+        "dx": 21.998358732274028,
+        "dy": 22.806035989475276
+      }
+    },
+    {
+      "name": "s+d keyup stop",
+      "pass": true,
+      "evidence": {
+        "released": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 599.1779737094326,
+            "y": 6616.693141371468,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 599.1779737094326,
+            "y": 6616.693141371468
+          }
+        },
+        "stopped": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 599.1779737094326,
+            "y": 6616.693141371468,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 599.1779737094326,
+            "y": 6616.693141371468
+          }
+        }
+      }
+    },
+    {
+      "name": "ArrowUp",
+      "pass": true,
+      "evidence": {
+        "dx": 0,
+        "dy": -27.716902000005575
+      }
+    },
+    {
+      "name": "ArrowUp keyup stop",
+      "pass": true,
+      "evidence": {
+        "released": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 599.1779737094326,
+            "y": 6588.976239371463,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 599.1779737094326,
+            "y": 6588.976239371463
+          }
+        },
+        "stopped": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 599.1779737094326,
+            "y": 6588.976239371463,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 599.1779737094326,
+            "y": 6588.976239371463
+          }
+        }
+      }
+    },
+    {
+      "name": "ArrowLeft",
+      "pass": true,
+      "evidence": {
+        "dx": -27.726926000000844,
+        "dy": 0
+      }
+    },
+    {
+      "name": "ArrowLeft keyup stop",
+      "pass": true,
+      "evidence": {
+        "released": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 571.4510477094318,
+            "y": 6588.976239371463,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 571.4510477094318,
+            "y": 6588.976239371463
+          }
+        },
+        "stopped": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 571.4510477094318,
+            "y": 6588.976239371463,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 571.4510477094318,
+            "y": 6588.976239371463
+          }
+        }
+      }
+    },
+    {
+      "name": "ArrowDown",
+      "pass": true,
+      "evidence": {
+        "dx": 0,
+        "dy": 28.936914000003526
+      }
+    },
+    {
+      "name": "ArrowDown keyup stop",
+      "pass": true,
+      "evidence": {
+        "released": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 571.4510477094318,
+            "y": 6618.503153371466,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 571.4510477094318,
+            "y": 6618.503153371466
+          }
+        },
+        "stopped": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 571.4510477094318,
+            "y": 6618.503153371466,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 571.4510477094318,
+            "y": 6618.503153371466
+          }
+        }
+      }
+    },
+    {
+      "name": "ArrowRight",
+      "pass": true,
+      "evidence": {
+        "dx": 27.716926000000853,
+        "dy": 0
+      }
+    },
+    {
+      "name": "ArrowRight keyup stop",
+      "pass": true,
+      "evidence": {
+        "released": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 599.1679737094327,
+            "y": 6618.503153371466,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 599.1679737094327,
+            "y": 6618.503153371466
+          }
+        },
+        "stopped": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 599.1679737094327,
+            "y": 6618.503153371466,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 599.1679737094327,
+            "y": 6618.503153371466
+          }
+        }
+      }
+    },
+    {
+      "name": "direction aliases",
+      "pass": true,
+      "evidence": {
+        "state": "GAMEPLAY",
+        "movement": {
+          "up": true,
+          "down": false,
+          "left": false,
+          "right": false
+        },
+        "attack": false,
+        "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+        "lastAction": "",
+        "nativeMovement": {
+          "x": 599.1679737094327,
+          "y": 6613.4180273714655,
+          "dx": 0,
+          "dy": -76.31999999999827
+        },
+        "position": {
+          "x": 599.1679737094327,
+          "y": 6613.4180273714655
+        }
+      }
+    },
+    {
+      "name": "window blur clears and stops",
+      "pass": true,
+      "evidence": {
+        "blurred": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 607.4847117094326,
+            "y": 6612.921779371465,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 607.4847117094326,
+            "y": 6612.921779371465
+          }
+        },
+        "afterBlur": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "",
+          "nativeMovement": {
+            "x": 607.4847117094326,
+            "y": 6612.921779371465,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 607.4847117094326,
+            "y": 6612.921779371465
+          }
+        }
+      }
+    },
+    {
+      "name": "Tab opens inventory",
+      "pass": true
+    },
+    {
+      "name": "inventory isolation",
+      "pass": true
+    },
+    {
+      "name": "Tab closes inventory",
+      "pass": true
+    },
+    {
+      "name": "mouse opens inventory",
+      "pass": true
+    },
+    {
+      "name": "mouse closes inventory",
+      "pass": true
+    },
+    {
+      "name": "Esc pauses",
+      "pass": true
+    },
+    {
+      "name": "pause isolation",
+      "pass": true
+    },
+    {
+      "name": "Esc resumes",
+      "pass": true
+    },
+    {
+      "name": "original WASD setting compatibility",
+      "pass": true,
+      "evidence": {
+        "legacyBefore": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "Touch t630",
+          "nativeMovement": {
+            "x": 607.4847117094326,
+            "y": 6612.921779371465,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 607.4847117094326,
+            "y": 6612.921779371465
+          }
+        },
+        "legacyAfter": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "Touch t630",
+          "nativeMovement": {
+            "x": 635.2017817094336,
+            "y": 6612.921779371465,
+            "dx": 0,
+            "dy": 0
+          },
+          "position": {
+            "x": 635.2017817094336,
+            "y": 6612.921779371465
+          }
+        }
+      }
+    },
+    {
+      "name": "F1 help",
+      "pass": true
+    },
+    {
+      "name": "F1 closes help",
+      "pass": true
+    },
+    {
+      "name": "empty slots no-op",
+      "pass": true
+    },
+    {
+      "name": "no target / no ammo actions safe",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "passed": true
+}

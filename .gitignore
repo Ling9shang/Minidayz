@@ -6,3 +6,6 @@ reports/offline-profile/
 reports/gameplay-profile/
 reports/sequential-gameplay-profile/
 reports/portable-profile/
+
+reports/phase2-*-profile/
+reports/phase2-test-profile/
