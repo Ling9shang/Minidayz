@@ -2,11 +2,16 @@
 (() => {
   'use strict';
   if (window.__MINIDAYZ_PC_CONTROLS) return;
-  const directions = {KeyA:0,ArrowLeft:0,KeyD:1,ArrowRight:1,KeyW:2,ArrowUp:2,KeyS:3,ArrowDown:3};
-  const controls = new Set([...Object.keys(directions),'Space','KeyE','KeyR','Tab','Digit1','Digit2','Digit3','KeyQ','Escape']);
+  let directions={},actions={},controls=new Set(),enabled=true;
+  function bind(options){
+    enabled=options.keyboardControls!==false;
+    directions={};actions={};controls=new Set(['KeyW','KeyA','KeyS','KeyD','ArrowUp','ArrowDown','ArrowLeft','ArrowRight','Space','KeyE','KeyR','Tab','Digit1','Digit2','Digit3','KeyQ','Escape']);
+    for(const [action,codes]of Object.entries(options.keybindings||{}))for(const code of codes){actions[code]=action;controls.add(code);if(action in {left:0,right:1,up:2,down:3})directions[code]=({left:0,right:1,up:2,down:3})[action];}
+  }
   const keys = new Set(), hooked = new WeakSet(), actionHooks = new WeakSet();
   let runtime, variableCount=0, vars = {}, movement, ownedMovement = false, attack, nextId = 900000, help, debug, lastAnimation = 0, lastAction = '';
-  const config = window.__MINIDAYZ_PC_CONFIG || {};
+  let config = window.__MINIDAYZ_PC_CONFIG || {};
+  bind(config);
   function refresh() {
     const r = window.cr_getC2Runtime?.();
     if (r && (r !== runtime || r.tD.length!==variableCount)) {runtime=r;variableCount=r.tD.length;vars=Object.fromEntries(r.tD.map(v=>[v.name,v]));}
@@ -54,7 +59,7 @@
   function reset() {keys.clear();stop();endTouch(attack,true);attack=null;}
   function tick() {
     const s=state();
-    if(s!=='GAMEPLAY'||help){reset();} else {
+    if(!enabled||s!=='GAMEPLAY'||help){reset();} else {
       for(const sid of ['9625642696643534','9930687941620704','7757159177161953','1517613854353735','8419439398002459','1099329243773422','836549825138281','815508659066383','619738897100984','649783150272213']){
         const a=runtime.Hg[sid];
         if(a && !actionHooks.has(a)){const original=a.Ac;a.Ac=function(){if([...keys].some(k=>k in directions)&&state()==='GAMEPLAY')return;return original.apply(this,arguments);};actionHooks.add(a);}
@@ -76,34 +81,34 @@
       }
       if(attack){
         const o=button(505);
-        if(!o||o!==attack.object){endTouch(attack,true);attack=null;keys.delete('Space');}
+        if(!o||o!==attack.object){endTouch(attack,true);attack=null;for(const k of [...keys])if(actions[k]==='attack')keys.delete(k);}
         else {const p=point(o);p.pointerId=attack.event.pointerId;attack.touch.lm(p);attack.event=p;}
       }
       // Animation refresh runs after the native event sheet, where its input state is current.
     }
     if(debug)debug.textContent=JSON.stringify(snapshot(),null,2);
   }
-  function snapshot(){return {state:state(),movement:{up:keys.has('KeyW')||keys.has('ArrowUp'),down:keys.has('KeyS')||keys.has('ArrowDown'),left:keys.has('KeyA')||keys.has('ArrowLeft'),right:keys.has('KeyD')||keys.has('ArrowRight')},attack:keys.has('Space'),controlMethod:'Native AltMove actions / C2 Function / native Touch handler',lastAction,nativeMovement:movement?{x:movement.j.x,y:movement.j.y,dx:movement.M,dy:movement.L}:null,position:player()?{x:player().x,y:player().y}:null};}
+  function snapshot(){return {state:state(),movement:{up:[...keys].some(k=>directions[k]===2),down:[...keys].some(k=>directions[k]===3),left:[...keys].some(k=>directions[k]===0),right:[...keys].some(k=>directions[k]===1)},attack:[...keys].some(k=>actions[k]==='attack'),enabled,controlMethod:'Native AltMove actions / C2 Function / native Touch handler',lastAction,nativeMovement:movement?{x:movement.j.x,y:movement.j.y,dx:movement.M,dy:movement.L}:null,position:player()?{x:player().x,y:player().y}:null};}
   function overlay(kind) {
     let o=kind==='help'?help:debug;
     if(o){o.remove();if(kind==='help')help=null;else debug=null;return;}
     o=document.createElement('pre');o.style.cssText='position:fixed;z-index:99999;top:24px;left:24px;max-width:calc(100vw - 80px);padding:20px;color:#fff;background:rgba(15,20,24,.95);border:1px solid #9ca;font:16px/1.65 Consolas,monospace;white-space:pre-wrap;pointer-events:none';
     if(kind==='help'){
-      reset();o.textContent='PC Controls\n\nWASD / Arrow Keys — Move\nMouse — Original targeting / UI\nSpace — Attack / Shoot\nE — Interact\nR — Reload\nTab — Inventory\n1 / 2 / 3 — Melee / Primary / Secondary\nQ — Switch weapon\nEsc — Pause / Resume\nF11 / Alt+Enter — Fullscreen\nF1 — Close controls\n\nMouse controls remain available.';help=o;
+      reset();o.textContent='PC Controls\n\n'+Object.entries(config.keybindings).map(([a,c])=>c.map(k=>k.replace(/^Key|^Digit/, '')).join(' / ')+' — '+a).join('\n')+'\n\nF1 — Controls\nF2 — Settings\nF11 / Alt+Enter — Fullscreen\nMouse controls remain available.';help=o;
     }else debug=o;
     document.body.append(o);
   }
   const typing=e=>e.target?.closest?.('input,textarea,[contenteditable="true"]');
   window.addEventListener('keydown',e=>{
-    if(typing(e)||e.ctrlKey||e.metaKey||e.altKey)return;
+    if(!enabled||typing(e)||e.ctrlKey||e.metaKey||e.altKey)return;
     if(e.code==='F1'||(e.code==='F10'&&config.dev)){e.preventDefault();e.stopImmediatePropagation();if(!e.repeat)overlay(e.code==='F1'?'help':'debug');return;}
     if(!controls.has(e.code))return;
-    const s=state();
+    const action=actions[e.code],s=state();
     if(s==='MENU'||s==='DEAD_OR_BLOCKED')return;
     e.preventDefault();e.stopImmediatePropagation();
-    if(e.repeat || help)return;
-    if(e.code==='Escape') {reset();if(s==='PAUSE')tap(button(630,o=>o.cc[0]===3));else if(s==='INVENTORY')window.c2_callFunction('close_inventory',[]);else if(s==='GAMEPLAY')tap(button(288));return;}
-    if(e.code==='Tab' && (s==='GAMEPLAY'||s==='INVENTORY')){reset();tap(button(497));return;}
+    if(e.repeat || help || !action)return;
+    if(action==='pause') {reset();if(s==='PAUSE')tap(button(630,o=>o.cc[0]===3));else if(s==='INVENTORY')window.c2_callFunction('close_inventory',[]);else if(s==='GAMEPLAY')tap(button(288));return;}
+    if(action==='inventory' && (s==='GAMEPLAY'||s==='INVENTORY')){reset();tap(button(497));return;}
     if(s!=='GAMEPLAY')return;
     if(e.code in directions && ![...keys].some(k=>k in directions)){
       const destroy=runtime.Hg['1952441083829329']?.Ac;
@@ -117,32 +122,26 @@
       if(m){movement=m;ownedMovement=true;stop();}
     }
     keys.add(e.code);
-    if(e.code==='Space'){
+    if(action==='attack'){
       if(player().cc[3]===0){const event=runtime.wj.melee_2_auto;if(event?.ci&&typeof runtime.TE==='function'){runtime.TE(null,'system',event,0);lastAction='Native Melee_2_auto event (original target/range/cooldown)';}}
       else attack=startTouch(button(505));
     }
-    if(e.code==='KeyE')tap(button(512,o=>o.opacity===1)||button(736));
-    if(e.code==='KeyR')tap(button(522));
-    if(e.code==='KeyQ')tap(button(509));
-    const slots={Digit1:['Switch_to_melee',4],Digit2:['Switch_to_firearm',1],Digit3:['Switch_to_pistol',44]};
-    if(slots[e.code] && !value('Reloading_mag') && player().cc[slots[e.code][1]]>0){window.c2_callFunction(slots[e.code][0],[]);lastAction=slots[e.code][0];}
+    if(action==='interact')tap(button(512,o=>o.opacity===1)||button(736));
+    if(action==='reload')tap(button(522));
+    if(action==='switchWeapon')tap(button(509));
+    const slots={melee:['Switch_to_melee',4],primary:['Switch_to_firearm',1],secondary:['Switch_to_pistol',44]};
+    if(slots[action] && !value('Reloading_mag') && player().cc[slots[action][1]]>0){window.c2_callFunction(slots[action][0],[]);lastAction=slots[action][0];}
   },true);
   window.addEventListener('keyup',e=>{
     if(!keys.has(e.code))return;
-    keys.delete(e.code);e.preventDefault();e.stopImmediatePropagation();
-    if(e.code==='Space'){endTouch(attack);attack=null;}
+    const action=actions[e.code];keys.delete(e.code);e.preventDefault();e.stopImmediatePropagation();
+    if(action==='attack'&&![...keys].some(k=>actions[k]==='attack')){endTouch(attack);attack=null;}
     if(e.code in directions && ![...keys].some(k=>k in directions))stop();
   },true);
   window.addEventListener('blur',reset);
   document.addEventListener('visibilitychange',()=>{if(document.hidden)reset();});
-  window.__MINIDAYZ_PC_CONTROLS={snapshot,reset,version:'2.3.3-phase2'};
+  window.__MINIDAYZ_PC_CONTROLS={snapshot,reset,updateConfig(options){reset();if(help){help.remove();help=null;}if(debug){debug.remove();debug=null;}config=options;bind(options);},version:'2.3.3-phase3'};
   // One adapter tick; movement feeds the existing behavior immediately before its native tick.
   function attach(){if(refresh()){runtime.Ef({ya:tick});runtime.rH({Oi(){if(ownedMovement&&state()==='GAMEPLAY'&&performance.now()-lastAnimation>100){window.c2_callFunction('animation_redraw',[]);lastAnimation=performance.now();}}});}else requestAnimationFrame(attach);}
   attach();
 })();
-
-
-
-
-
-

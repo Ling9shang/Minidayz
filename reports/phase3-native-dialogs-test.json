@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "cancellation": true,
+  "mdczsaveFilter": true,
+  "sameGameDifferentDesktop": true,
+  "unknownVersionCancelUnchanged": true,
+  "unknownVersionExplicitConfirm": true,
+  "stagingCleanup": true,
+  "method": "production dialog branches; native APIs mocked in trusted test main process",
+  "environment": "portable",
+  "testedAt": "2026-10-02T21:25:59.391Z"
+}

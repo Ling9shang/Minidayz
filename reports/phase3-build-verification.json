@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "testedAt": "2026-10-02T21:30:56.617Z",
+  "phase2Tag": "v2.3.3-desktop-phase2",
+  "previousReportsUnchanged": true,
+  "gameDirectoryUnchanged": true,
+  "packagedDesktopFilesMatch": true,
+  "desktopVersion": "2.3.3-desktop.3",
+  "core": {
+    "game/data.js": {
+      "unchanged": true,
+      "packagedBytesMatchWorkingFile": true,
+      "gitContentsMatchIgnoringCheckoutEol": true,
+      "sha256": "fc10b8edae15128ff2d68c54c35eeacbabfdd14405d2c4304eee452fe334028a"
+    },
+    "game/c2runtime.js": {
+      "unchanged": true,
+      "packagedBytesMatchWorkingFile": true,
+      "gitContentsMatchIgnoringCheckoutEol": true,
+      "sha256": "0b12a1f2dd11957884b699008fbd02569332a3003492c05d92d4e8d95226cfbc"
+    }
+  },
+  "exe": {
+    "path": "F:\\Game\\MiniDayZ-Cangshu-PC\\release\\MiniDayZ-Cangshu-v2.3.3-x64.exe",
+    "size": 113282900,
+    "sha256": "c36444d42d59690a5dbff0bdce09985bbc65166db7335ea3617fd70733c745fc"
+  }
+}

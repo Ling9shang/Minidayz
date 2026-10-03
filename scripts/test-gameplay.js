@@ -1,10 +1,8 @@
 const {_electron:electron}=require('playwright'),fs=require('fs'),path=require('path'),crypto=require('crypto');
-const report=name=>path.join('reports',(process.env.MINIDAYZ_REPORT_PREFIX||'phase2-')+name);
+const report=name=>path.join('reports',(process.env.MINIDAYZ_REPORT_PREFIX||'phase3-')+name);
 async function launch(options){
  if(!process.env.MINIDAYZ_TEST_PORTABLE)return electron.launch(options);
- require('child_process').spawn(path.resolve('release/MiniDayZ-Cangshu-v2.3.3-x64.exe'),['--remote-debugging-port=9234'],{windowsHide:true,env:options.env});
- let browser;for(let i=0;i<30;i++){try{browser=await require('playwright').chromium.connectOverCDP('http://127.0.0.1:9234');break;}catch{await new Promise(r=>setTimeout(r,1000));}}
- if(!browser)throw Error('Portable launch failed');return {firstWindow:async()=>browser.contexts()[0].pages()[0],close:async()=>{const cdp=await browser.newBrowserCDPSession();await Promise.race([cdp.send('Browser.close').catch(()=>{}),new Promise(r=>setTimeout(r,2000))]);await browser.close();await new Promise(r=>setTimeout(r,1000));}};
+ return require('./desktop-test-helpers').launch(path.basename(options.env.MINIDAYZ_TEST_USERDATA));
 }
 (async()=>{
  const options={executablePath:process.env.MINIDAYZ_TEST_EXECUTABLE||undefined,args:process.env.MINIDAYZ_TEST_EXECUTABLE?[]:['.'],env:{...process.env,MINIDAYZ_TEST_USERDATA:path.resolve(report('sequential-gameplay-profile')),MINIDAYZ_OFFLINE_TEST:'1'}};
@@ -17,8 +15,8 @@ async function launch(options){
  const before=await readSave();
  await app.close();app=await launch(options);page=await app.firstWindow();await page.waitForTimeout(20000);
  const after=await readSave();await page.screenshot({path:report('sequential-restarted-menu.png')});
- await click(512,350,8000);await page.screenshot({path:report('sequential-resumed-map.png')});await app.close();
+ await click(512,350,8000);const continued=await page.evaluate(()=>cr_getC2Runtime().wa.name==='Map'&&cr_getC2Runtime().S[181].q.length===1);await page.screenshot({path:report('sequential-resumed-map.png')});await app.close();
  const hash=s=>s?crypto.createHash('sha256').update(s).digest('hex'):null;
  const criticalErrors=errors.filter(e=>!e.endsWith('/media/menu_click.ogg'));
- const result={portable:!!process.env.MINIDAYZ_TEST_PORTABLE,errors,criticalErrors,knownUpstream404:'media/menu_click.ogg is also HTTP 404 on the public original',saveBytes:before.save?.length||0,beforeHash:hash(before.save),afterHash:hash(after.save),beforeFlag:before.flag,afterFlag:after.flag,passed:!!before.save&&before.save===after.save&&before.flag===after.flag};fs.writeFileSync(report('gameplay-test.json'),JSON.stringify(result,null,2));console.log(result);if(!result.passed||criticalErrors.length)process.exitCode=1;
+ const result={portable:!!process.env.MINIDAYZ_TEST_PORTABLE,continued,errors,criticalErrors,knownUpstream404:'media/menu_click.ogg is also HTTP 404 on the public original',saveBytes:before.save?.length||0,beforeHash:hash(before.save),afterHash:hash(after.save),beforeFlag:before.flag,afterFlag:after.flag,passed:continued&&!!before.save&&before.save===after.save&&before.flag===after.flag};fs.writeFileSync(report('gameplay-test.json'),JSON.stringify(result,null,2));console.log(result);if(!result.passed||criticalErrors.length)process.exitCode=1;
 })().catch(e=>{console.error(e);process.exitCode=1;});

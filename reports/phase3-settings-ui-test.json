@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "F2": true,
+  "persistence": true,
+  "resetOnlyBindings": true,
+  "conflictRejected": true,
+  "hotEnableDisable": true,
+  "folderAPI": true,
+  "settingsIsolation": true,
+  "startFullscreenNextLaunch": true,
+  "environment": "portable",
+  "testedAt": "2026-10-02T21:30:21.694Z"
+}

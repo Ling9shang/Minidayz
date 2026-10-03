@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "actual": {
+    "localStorage": "A",
+    "indexedDB": "A"
+  },
+  "preImportBackup": "pre-import-2026-10-02T21-24-26-443Z-4300ab20.mdczsave",
+  "restoreBackup": true,
+  "preRestoreBackup": true,
+  "restartPersistence": true,
+  "environment": "portable",
+  "testedAt": "2026-10-02T21:24:53.678Z"
+}

@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "size": 1161765,
+  "manifest": {
+    "format": 1,
+    "game": "MiniDayZ Cangshu",
+    "gameVersion": "2.3.3",
+    "desktopVersion": "2.3.3-desktop.3",
+    "createdAt": "2026-10-02T21:24:15.210Z",
+    "source": "manual-export",
+    "storage": {
+      "indexedDB": true,
+      "localStorage": true
+    },
+    "files": {
+      "storage/indexeddb/records.json": {
+        "size": 1160683,
+        "sha256": "0c4c24916be5fadeac229f5d4dcfd08a2d73e722ff6e7da6ab1f35db10ae23e6"
+      },
+      "storage/localstorage/values.json": {
+        "size": 21,
+        "sha256": "88c0b3c168042e927bc1e6c50f3cb66fc8ccc5475ba8dc2467c56363f3587fdd"
+      }
+    },
+    "logicalSaveHash": "4c99a40dc57e1a476e67f4401358ea08cbb4a35e6d5e9a1a1431780dc03d16ed"
+  },
+  "entries": [
+    "manifest.json",
+    "storage/indexeddb/records.json",
+    "storage/localstorage/values.json"
+  ],
+  "schemaUnchanged": true,
+  "rawC2SaveUnchanged": true,
+  "manifestOnlyAllowedMetadata": true,
+  "environment": "portable",
+  "testedAt": "2026-10-02T21:24:15.389Z"
+}

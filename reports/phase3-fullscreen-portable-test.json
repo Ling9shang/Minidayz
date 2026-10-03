@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "environment": "portable",
+  "method": "native webContents input; BrowserWindow.isFullScreen",
+  "initial": false,
+  "f11": true,
+  "restored": false,
+  "altEnter": true,
+  "final": false
+}

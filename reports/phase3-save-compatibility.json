@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "name": "Phase 1 executable has no keyboard injection",
+      "pass": true
+    },
+    {
+      "name": "Phase 1 save unchanged when Phase 3 opens",
+      "pass": true
+    },
+    {
+      "name": "Phase 3 continues Phase 1 save",
+      "pass": true
+    },
+    {
+      "name": "same top-level Construct 2 schema",
+      "pass": true
+    },
+    {
+      "name": "adapter state absent from save",
+      "pass": true
+    },
+    {
+      "name": "Phase 3 save unchanged across disabled restart",
+      "pass": true
+    },
+    {
+      "name": "keyboard injection disabled",
+      "pass": true
+    },
+    {
+      "name": "original game continues Phase 3 save",
+      "pass": true
+    }
+  ],
+  "source": "New save created by retained Phase 1 portable EXE",
+  "phase1SaveBytes": 933705,
+  "phase1Hash": "f2dff8be6d949e2c20eb3315f359158597319a71faa4fb009c30deb60131b16c",
+  "phase3SaveBytes": 934635,
+  "phase3Hash": "515e7d826c6f0b2cee8de1965e41624ad21a3a124aaad6e8462fce213df9ce7e",
+  "schemaBefore": [
+    "c2save",
+    "events",
+    "layouts",
+    "rt",
+    "system",
+    "types",
+    "version"
+  ],
+  "schemaAfter": [
+    "c2save",
+    "events",
+    "layouts",
+    "rt",
+    "system",
+    "types",
+    "version"
+  ],
+  "passed": true
+}

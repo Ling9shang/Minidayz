@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "truncated",
+      "rejected": true,
+      "unchanged": true
+    },
+    {
+      "name": "missing-manifest",
+      "rejected": true,
+      "unchanged": true
+    },
+    {
+      "name": "missing-indexeddb",
+      "rejected": true,
+      "unchanged": true
+    },
+    {
+      "name": "wrong-sha256",
+      "rejected": true,
+      "unchanged": true
+    },
+    {
+      "name": "illegal-../../evil.txt",
+      "rejected": true,
+      "unchanged": true
+    },
+    {
+      "name": "illegal-C:/evil.txt",
+      "rejected": true,
+      "unchanged": true
+    },
+    {
+      "name": "illegal-/evil.txt",
+      "rejected": true,
+      "unchanged": true
+    },
+    {
+      "name": "illegal-storage/../evil.txt",
+      "rejected": true,
+      "unchanged": true
+    },
+    {
+      "name": "symlink",
+      "rejected": true,
+      "unchanged": true
+    },
+    {
+      "name": "wrong-crc",
+      "rejected": true,
+      "unchanged": true
+    },
+    {
+      "name": "post-write failure",
+      "rollback": true,
+      "unchanged": true
+    }
+  ],
+  "environment": "portable",
+  "testedAt": "2026-10-02T21:25:31.319Z"
+}

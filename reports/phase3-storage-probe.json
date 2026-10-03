@@ -1,0 +1,416 @@
+{
+  "databases": [
+    {
+      "name": "_C2SaveStates_mdz-cangshu-v233",
+      "version": 1,
+      "stores": [
+        {
+          "name": "saves",
+          "keyPath": "slot",
+          "autoIncrement": false,
+          "indexes": [],
+          "keys": [
+            "mysave"
+          ],
+          "values": [
+            {
+              "type": "object",
+              "keys": [
+                "slot",
+                "data"
+              ],
+              "dataLength": 966958
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "localforage_mdz-cangshu-v233",
+      "version": 2,
+      "stores": [
+        {
+          "name": "keyvaluepairs",
+          "keyPath": null,
+          "autoIncrement": false,
+          "indexes": [],
+          "keys": [
+            "Bandits_killed",
+            "CONTROLS",
+            "Characters_unlocks",
+            "Deaths",
+            "EP_counter",
+            "Player_skin",
+            "SOUNDS",
+            "Survive_time",
+            "Zeds_killed",
+            "achieves",
+            "aug_unlock",
+            "aug_unlock_progress",
+            "box_1",
+            "box_10",
+            "box_2",
+            "box_20",
+            "box_3",
+            "box_30",
+            "box_4",
+            "box_40",
+            "box_5",
+            "box_50",
+            "box_6",
+            "box_60",
+            "box_bb1",
+            "box_bb10",
+            "box_bb2",
+            "box_bb20",
+            "box_bb3",
+            "box_bb30",
+            "box_bb4",
+            "box_bb40",
+            "box_bb5",
+            "box_bb50",
+            "box_bb6",
+            "box_bb60",
+            "char_10",
+            "char_11",
+            "char_12",
+            "char_13",
+            "char_14",
+            "char_15",
+            "char_16",
+            "char_17",
+            "char_18",
+            "char_19",
+            "char_20",
+            "char_4",
+            "char_5",
+            "char_6",
+            "char_7",
+            "char_8",
+            "char_9",
+            "char_update_avalible",
+            "clear_tutorial_save",
+            "deagle_unlock",
+            "deagle_unlock_progress",
+            "gamesav_v7",
+            "item_update_avalible",
+            "katana_unlock",
+            "katana_unlock_progress",
+            "laser_unlock",
+            "lighter_unlock",
+            "mac10_unlock",
+            "mac10_unlock_progress",
+            "mgl_unlock",
+            "mgl_unlock_progress",
+            "plast_unlock",
+            "saiga12_unlock",
+            "saiga12_unlock_progress",
+            "smoke_unlock",
+            "stick_pos_X",
+            "stick_pos_Y",
+            "sv98_unlock",
+            "sv98_unlock_progress",
+            "userID",
+            "vss_unlock",
+            "vss_unlock_progress",
+            "wpn_update_avalible",
+            "xxx_unlock"
+          ],
+          "values": [
+            {
+              "type": "string",
+              "length": 1
+            },
+            {
+              "type": "string",
+              "length": 3
+            },
+            {
+              "type": "string",
+              "length": 1
+            },
+            {
+              "type": "string",
+              "length": 1
+            },
+            {
+              "type": "string",
+              "length": 1
+            },
+            {
+              "type": "string",
+              "length": 1
+            },
+            {
+              "type": "string",
+              "length": 2
+            },
+            {
+              "type": "string",
+              "length": 1
+            },
+            {
+              "type": "string",
+              "length": 1
+            },
+            {
+              "type": "string",
+              "length": 70
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "string",
+              "length": 1
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "string",
+              "length": 1
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "string",
+              "length": 30
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        },
+        {
+          "name": "local-forage-detect-blob-support",
+          "keyPath": null,
+          "autoIncrement": false,
+          "indexes": [],
+          "keys": [],
+          "values": []
+        }
+      ]
+    }
+  ],
+  "localStorage": {},
+  "paths": {
+    "userData": "F:\\Game\\MiniDayZ-Cangshu-PC\\reports\\phase3-storage-inspection-profile",
+    "defaultUserData": "C:\\Users\\Lenovo\\AppData\\Roaming\\MiniDayZ Cangshu PC"
+  },
+  "browser": {
+    "cookieLength": 0,
+    "sessionStorageKeys": []
+  },
+  "relativeFiles": [
+    "IndexedDB\\app_minidayz_0.indexeddb.leveldb\\000003.log",
+    "IndexedDB\\app_minidayz_0.indexeddb.leveldb\\CURRENT",
+    "IndexedDB\\app_minidayz_0.indexeddb.leveldb\\LOCK",
+    "IndexedDB\\app_minidayz_0.indexeddb.leveldb\\LOG",
+    "IndexedDB\\app_minidayz_0.indexeddb.leveldb\\LOG.old",
+    "IndexedDB\\app_minidayz_0.indexeddb.leveldb\\MANIFEST-000001",
+    "IndexedDB\\app_minidayz_0.indexeddb.blob\\2\\00\\b",
+    "Local Storage\\leveldb\\000003.log",
+    "Local Storage\\leveldb\\CURRENT",
+    "Local Storage\\leveldb\\LOCK",
+    "Local Storage\\leveldb\\LOG",
+    "Local Storage\\leveldb\\LOG.old",
+    "Local Storage\\leveldb\\MANIFEST-000001",
+    "Network\\Cookies",
+    "Network\\Cookies-journal",
+    "Network\\Network Persistent State",
+    "Network\\NetworkDataMigrated",
+    "Network\\Trust Tokens",
+    "Network\\Trust Tokens-journal"
+  ]
+}

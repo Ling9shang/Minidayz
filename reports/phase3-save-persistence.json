@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "result": {
+    "localStorage": "1790975473542",
+    "indexedDB": "1790975473542"
+  },
+  "scope": "Storage restart test; does not prove in-game Save and Exit"
+}

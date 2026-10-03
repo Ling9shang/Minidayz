@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "url": "app://minidayz/mdz-cangshu-v233/index.html",
+  "errors": [],
+  "externalRequests": [],
+  "scope": "Actual portable EXE offline startup and menu",
+  "environment": "portable",
+  "testedAt": "2026-10-02T21:24:05.307Z",
+  "portable": true
+}

@@ -1,1 +1,1 @@
-{"keyboardControls":true}
+{"version":1,"keyboardControls":true,"startFullscreen":false,"autoBackup":true,"maxBackups":10,"keybindings":{"up":["KeyW","ArrowUp"],"down":["KeyS","ArrowDown"],"left":["KeyA","ArrowLeft"],"right":["KeyD","ArrowRight"],"attack":["Space"],"interact":["KeyE"],"reload":["KeyR"],"inventory":["Tab"],"melee":["Digit1"],"primary":["Digit2"],"secondary":["Digit3"],"switchWeapon":["KeyQ"],"pause":["Escape"]}}

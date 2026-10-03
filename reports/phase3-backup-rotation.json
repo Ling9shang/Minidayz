@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "autoCount": 3,
+  "retained": [
+    "2",
+    "3",
+    "4"
+  ],
+  "manualPreserved": true,
+  "foreignPreserved": true,
+  "unchangedSkipped": true
+}

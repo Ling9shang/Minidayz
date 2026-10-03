@@ -1,6 +1,6 @@
 {
   "name": "minidayz-cangshu-pc",
-  "version": "2.3.3-desktop.2",
+  "version": "2.3.3-desktop.3",
   "description": "Offline MiniDayZ Cangshu desktop",
   "main": "desktop/main.js",
   "scripts": {
@@ -11,7 +11,10 @@
     "test:offline": "node scripts/test-offline.js",
     "test:save": "node scripts/test-save-persistence.js",
     "build:win": "electron-builder --win portable --x64",
-    "test:keyboard": "node scripts/test-keyboard.js"
+    "test:keyboard": "node scripts/test-keyboard.js",
+    "test:settings": "node scripts/test-settings.js",
+    "test:export": "node scripts/test-save-export.js",
+    "test:import": "node scripts/test-save-import.js"
   },
   "build": {
     "appId": "info.moyu.minidayz.cangshu.pc",

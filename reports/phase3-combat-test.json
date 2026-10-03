@@ -1,0 +1,4787 @@
+{
+  "environment": "portable",
+  "fixturePolicy": "Isolated profile: original Create object and Set instance variable actions supply native weapons, ammo IDs 11/12 and 60 test rounds. A native enemy is relocated or created with default stats. Production code creates no items and writes no ammo/health/damage.",
+  "errors": [],
+  "externalRequests": [],
+  "steps": [
+    {
+      "name": "E 33",
+      "item": {
+        "uid": 14047,
+        "type": 33,
+        "originalValues": [
+          0,
+          1,
+          0,
+          0,
+          1.5,
+          -1,
+          100,
+          0,
+          0,
+          0,
+          "Split Axe",
+          0,
+          0,
+          0,
+          0,
+          0,
+          202,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "after": {
+        "controls": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "enabled": true,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "Touch t512",
+          "nativeMovement": null,
+          "position": {
+            "x": 600,
+            "y": 3272
+          }
+        },
+        "player": [
+          0,
+          0,
+          -1,
+          0,
+          1,
+          14047,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          73.5,
+          73.5,
+          100,
+          76.5,
+          11,
+          12133,
+          1,
+          12136,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          5,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          100,
+          0,
+          0
+        ],
+        "vars": [
+          {
+            "name": "Reloading_mag",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_maxpage",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_lastpage",
+            "data": 0
+          },
+          {
+            "name": "bb_gui",
+            "data": 0
+          },
+          {
+            "name": "bow_ammo",
+            "data": 0
+          },
+          {
+            "name": "3g_ammo",
+            "data": 0
+          },
+          {
+            "name": "pickpile_scroll_pos",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time_melee",
+            "data": 0
+          },
+          {
+            "name": "inventory_reloader",
+            "data": 0
+          },
+          {
+            "name": "Inventory_opened",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter_loop",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_chooser",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_on",
+            "data": 0
+          },
+          {
+            "name": "tutor_inventory_guide_step",
+            "data": -1
+          },
+          {
+            "name": "mareloadtime",
+            "data": 0
+          },
+          {
+            "name": "reloading_pellets",
+            "data": 0
+          }
+        ],
+        "weapons": [
+          {
+            "uid": 14047,
+            "type": 33,
+            "cc": [
+              1,
+              0,
+              0,
+              0,
+              1.5,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "Split Axe",
+              0,
+              0,
+              0,
+              0,
+              0,
+              202,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "counters": {
+          "melee": 0
+        }
+      }
+    },
+    {
+      "name": "E 45",
+      "item": {
+        "uid": 14051,
+        "type": 45,
+        "originalValues": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          -1,
+          100,
+          0,
+          0,
+          0,
+          "m4",
+          0,
+          0,
+          0,
+          0,
+          0,
+          158,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "after": {
+        "controls": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "enabled": true,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "Touch t512",
+          "nativeMovement": null,
+          "position": {
+            "x": 600,
+            "y": 3272
+          }
+        },
+        "player": [
+          0,
+          3,
+          14051,
+          1,
+          1,
+          14047,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          73.5,
+          73.5,
+          100,
+          76.5,
+          11,
+          12133,
+          1,
+          12136,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          5,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          100,
+          0,
+          0
+        ],
+        "vars": [
+          {
+            "name": "Reloading_mag",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_maxpage",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_lastpage",
+            "data": 0
+          },
+          {
+            "name": "bb_gui",
+            "data": 0
+          },
+          {
+            "name": "bow_ammo",
+            "data": 0
+          },
+          {
+            "name": "3g_ammo",
+            "data": 0
+          },
+          {
+            "name": "pickpile_scroll_pos",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time_melee",
+            "data": 0
+          },
+          {
+            "name": "inventory_reloader",
+            "data": 0
+          },
+          {
+            "name": "Inventory_opened",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter_loop",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_chooser",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_on",
+            "data": 0
+          },
+          {
+            "name": "tutor_inventory_guide_step",
+            "data": -1
+          },
+          {
+            "name": "mareloadtime",
+            "data": 0
+          },
+          {
+            "name": "reloading_pellets",
+            "data": 0
+          }
+        ],
+        "weapons": [
+          {
+            "uid": 14047,
+            "type": 33,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              1.5,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "Split Axe",
+              0,
+              0,
+              0,
+              0,
+              0,
+              202,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 14051,
+            "type": 45,
+            "cc": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "m4",
+              0,
+              0,
+              0,
+              0,
+              0,
+              158,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "counters": {
+          "melee": 0
+        }
+      }
+    },
+    {
+      "name": "E 71",
+      "item": {
+        "uid": 15384,
+        "type": 71,
+        "originalValues": [
+          0,
+          1,
+          0,
+          0,
+          0.2,
+          -1,
+          100,
+          0,
+          0,
+          0,
+          "colt pistol",
+          0,
+          0,
+          0,
+          0,
+          0,
+          152,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "after": {
+        "controls": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "enabled": true,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "Touch t512",
+          "nativeMovement": null,
+          "position": {
+            "x": 600,
+            "y": 3272
+          }
+        },
+        "player": [
+          0,
+          3,
+          14051,
+          2,
+          1,
+          14047,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          73,
+          73,
+          100,
+          77,
+          11,
+          12133,
+          1,
+          12136,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          5,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15384,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          100,
+          0,
+          0
+        ],
+        "vars": [
+          {
+            "name": "Reloading_mag",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_maxpage",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_lastpage",
+            "data": 0
+          },
+          {
+            "name": "bb_gui",
+            "data": 0
+          },
+          {
+            "name": "bow_ammo",
+            "data": 0
+          },
+          {
+            "name": "3g_ammo",
+            "data": 0
+          },
+          {
+            "name": "pickpile_scroll_pos",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time_melee",
+            "data": 0
+          },
+          {
+            "name": "inventory_reloader",
+            "data": 0
+          },
+          {
+            "name": "Inventory_opened",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter_loop",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_chooser",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_on",
+            "data": 0
+          },
+          {
+            "name": "tutor_inventory_guide_step",
+            "data": -1
+          },
+          {
+            "name": "mareloadtime",
+            "data": 0
+          },
+          {
+            "name": "reloading_pellets",
+            "data": 0
+          }
+        ],
+        "weapons": [
+          {
+            "uid": 14047,
+            "type": 33,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              1.5,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "Split Axe",
+              0,
+              0,
+              0,
+              0,
+              0,
+              202,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 14051,
+            "type": 45,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              0,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "m4",
+              0,
+              0,
+              0,
+              0,
+              0,
+              158,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 15384,
+            "type": 71,
+            "cc": [
+              1,
+              0,
+              0,
+              0,
+              0.2,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "colt pistol",
+              0,
+              0,
+              0,
+              0,
+              0,
+              152,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "counters": {
+          "melee": 0
+        }
+      }
+    },
+    {
+      "name": "E 30",
+      "item": {
+        "uid": 15468,
+        "type": 30,
+        "originalValues": [
+          "5x56",
+          60,
+          11,
+          0
+        ]
+      },
+      "after": {
+        "controls": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "enabled": true,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "Touch t512",
+          "nativeMovement": null,
+          "position": {
+            "x": 600,
+            "y": 3272
+          }
+        },
+        "player": [
+          0,
+          3,
+          14051,
+          2,
+          1,
+          14047,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          73,
+          73,
+          100,
+          77,
+          11,
+          12133,
+          1,
+          12136,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          5,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15384,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          100,
+          0,
+          0
+        ],
+        "vars": [
+          {
+            "name": "Reloading_mag",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_maxpage",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_lastpage",
+            "data": 0
+          },
+          {
+            "name": "bb_gui",
+            "data": 0
+          },
+          {
+            "name": "bow_ammo",
+            "data": 0
+          },
+          {
+            "name": "3g_ammo",
+            "data": 0
+          },
+          {
+            "name": "pickpile_scroll_pos",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time_melee",
+            "data": 0
+          },
+          {
+            "name": "inventory_reloader",
+            "data": 0
+          },
+          {
+            "name": "Inventory_opened",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter_loop",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_chooser",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_on",
+            "data": 0
+          },
+          {
+            "name": "tutor_inventory_guide_step",
+            "data": -1
+          },
+          {
+            "name": "mareloadtime",
+            "data": 0
+          },
+          {
+            "name": "reloading_pellets",
+            "data": 0
+          }
+        ],
+        "weapons": [
+          {
+            "uid": 14047,
+            "type": 33,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              1.5,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "Split Axe",
+              0,
+              0,
+              0,
+              0,
+              0,
+              202,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 14051,
+            "type": 45,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              0,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "m4",
+              0,
+              0,
+              0,
+              0,
+              0,
+              158,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 15384,
+            "type": 71,
+            "cc": [
+              1,
+              0,
+              0,
+              0,
+              0.2,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "colt pistol",
+              0,
+              0,
+              0,
+              0,
+              0,
+              152,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "counters": {
+          "melee": 0
+        }
+      }
+    },
+    {
+      "name": "E 29",
+      "item": {
+        "uid": 15472,
+        "type": 29,
+        "originalValues": [
+          "45acp",
+          60,
+          12,
+          0
+        ]
+      },
+      "after": {
+        "controls": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "enabled": true,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "Touch t512",
+          "nativeMovement": null,
+          "position": {
+            "x": 600,
+            "y": 3272
+          }
+        },
+        "player": [
+          0,
+          3,
+          14051,
+          2,
+          1,
+          14047,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          73,
+          73,
+          100,
+          77,
+          11,
+          12133,
+          1,
+          12136,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          5,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15384,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          100,
+          0,
+          0
+        ],
+        "vars": [
+          {
+            "name": "Reloading_mag",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_maxpage",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_lastpage",
+            "data": 0
+          },
+          {
+            "name": "bb_gui",
+            "data": 0
+          },
+          {
+            "name": "bow_ammo",
+            "data": 0
+          },
+          {
+            "name": "3g_ammo",
+            "data": 0
+          },
+          {
+            "name": "pickpile_scroll_pos",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time_melee",
+            "data": 0
+          },
+          {
+            "name": "inventory_reloader",
+            "data": 0
+          },
+          {
+            "name": "Inventory_opened",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter_loop",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_chooser",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_on",
+            "data": 0
+          },
+          {
+            "name": "tutor_inventory_guide_step",
+            "data": -1
+          },
+          {
+            "name": "mareloadtime",
+            "data": 0
+          },
+          {
+            "name": "reloading_pellets",
+            "data": 0
+          }
+        ],
+        "weapons": [
+          {
+            "uid": 14047,
+            "type": 33,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              1.5,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "Split Axe",
+              0,
+              0,
+              0,
+              0,
+              0,
+              202,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 14051,
+            "type": 45,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              0,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "m4",
+              0,
+              0,
+              0,
+              0,
+              0,
+              158,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 15384,
+            "type": 71,
+            "cc": [
+              1,
+              0,
+              0,
+              0,
+              0.2,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "colt pistol",
+              0,
+              0,
+              0,
+              0,
+              0,
+              152,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "counters": {
+          "melee": 0
+        }
+      }
+    },
+    {
+      "name": "key 1",
+      "after": {
+        "controls": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "enabled": true,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "Switch_to_melee",
+          "nativeMovement": null,
+          "position": {
+            "x": 600,
+            "y": 3272
+          }
+        },
+        "player": [
+          0,
+          3,
+          14051,
+          0,
+          1,
+          14047,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          73,
+          73,
+          100,
+          77,
+          11,
+          12133,
+          1,
+          12136,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          5,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15384,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          100,
+          0,
+          0
+        ],
+        "vars": [
+          {
+            "name": "Reloading_mag",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_maxpage",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_lastpage",
+            "data": 0
+          },
+          {
+            "name": "bb_gui",
+            "data": 0
+          },
+          {
+            "name": "bow_ammo",
+            "data": 0
+          },
+          {
+            "name": "3g_ammo",
+            "data": 0
+          },
+          {
+            "name": "pickpile_scroll_pos",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time_melee",
+            "data": 0
+          },
+          {
+            "name": "inventory_reloader",
+            "data": 0
+          },
+          {
+            "name": "Inventory_opened",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter_loop",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_chooser",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_on",
+            "data": 0
+          },
+          {
+            "name": "tutor_inventory_guide_step",
+            "data": -1
+          },
+          {
+            "name": "mareloadtime",
+            "data": 0
+          },
+          {
+            "name": "reloading_pellets",
+            "data": 0
+          }
+        ],
+        "weapons": [
+          {
+            "uid": 14047,
+            "type": 33,
+            "cc": [
+              1,
+              0,
+              0,
+              0,
+              1.5,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "Split Axe",
+              0,
+              0,
+              0,
+              0,
+              0,
+              202,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 14051,
+            "type": 45,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              0,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "m4",
+              0,
+              0,
+              0,
+              0,
+              0,
+              158,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 15384,
+            "type": 71,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              0.2,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "colt pistol",
+              0,
+              0,
+              0,
+              0,
+              0,
+              152,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "counters": {
+          "melee": 0
+        }
+      }
+    },
+    {
+      "name": "key 2",
+      "after": {
+        "controls": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "enabled": true,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "Switch_to_firearm",
+          "nativeMovement": null,
+          "position": {
+            "x": 600,
+            "y": 3272
+          }
+        },
+        "player": [
+          0,
+          3,
+          14051,
+          1,
+          1,
+          14047,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          73,
+          73,
+          100,
+          77,
+          11,
+          12133,
+          1,
+          12136,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          5,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15384,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          100,
+          0,
+          0
+        ],
+        "vars": [
+          {
+            "name": "Reloading_mag",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_maxpage",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_lastpage",
+            "data": 0
+          },
+          {
+            "name": "bb_gui",
+            "data": 0
+          },
+          {
+            "name": "bow_ammo",
+            "data": 0
+          },
+          {
+            "name": "3g_ammo",
+            "data": 0
+          },
+          {
+            "name": "pickpile_scroll_pos",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time_melee",
+            "data": 0
+          },
+          {
+            "name": "inventory_reloader",
+            "data": 0
+          },
+          {
+            "name": "Inventory_opened",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter_loop",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_chooser",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_on",
+            "data": 0
+          },
+          {
+            "name": "tutor_inventory_guide_step",
+            "data": -1
+          },
+          {
+            "name": "mareloadtime",
+            "data": 0
+          },
+          {
+            "name": "reloading_pellets",
+            "data": 0
+          }
+        ],
+        "weapons": [
+          {
+            "uid": 14047,
+            "type": 33,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              1.5,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "Split Axe",
+              0,
+              0,
+              0,
+              0,
+              0,
+              202,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 14051,
+            "type": 45,
+            "cc": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "m4",
+              0,
+              0,
+              0,
+              0,
+              0,
+              158,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 15384,
+            "type": 71,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              0.2,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "colt pistol",
+              0,
+              0,
+              0,
+              0,
+              0,
+              152,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "counters": {
+          "melee": 0
+        }
+      }
+    },
+    {
+      "name": "key 3",
+      "after": {
+        "controls": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "enabled": true,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "Switch_to_pistol",
+          "nativeMovement": null,
+          "position": {
+            "x": 600,
+            "y": 3272
+          }
+        },
+        "player": [
+          0,
+          3,
+          14051,
+          2,
+          1,
+          14047,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          72.5,
+          72.5,
+          100,
+          77.5,
+          11,
+          12133,
+          1,
+          12136,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          5,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15384,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          100,
+          0,
+          0
+        ],
+        "vars": [
+          {
+            "name": "Reloading_mag",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_maxpage",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_lastpage",
+            "data": 0
+          },
+          {
+            "name": "bb_gui",
+            "data": 0
+          },
+          {
+            "name": "bow_ammo",
+            "data": 0
+          },
+          {
+            "name": "3g_ammo",
+            "data": 0
+          },
+          {
+            "name": "pickpile_scroll_pos",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time_melee",
+            "data": 0
+          },
+          {
+            "name": "inventory_reloader",
+            "data": 0
+          },
+          {
+            "name": "Inventory_opened",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter_loop",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_chooser",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_on",
+            "data": 0
+          },
+          {
+            "name": "tutor_inventory_guide_step",
+            "data": -1
+          },
+          {
+            "name": "mareloadtime",
+            "data": 0
+          },
+          {
+            "name": "reloading_pellets",
+            "data": 0
+          }
+        ],
+        "weapons": [
+          {
+            "uid": 14047,
+            "type": 33,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              1.5,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "Split Axe",
+              0,
+              0,
+              0,
+              0,
+              0,
+              202,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 14051,
+            "type": 45,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              0,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "m4",
+              0,
+              0,
+              0,
+              0,
+              0,
+              158,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 15384,
+            "type": 71,
+            "cc": [
+              1,
+              0,
+              0,
+              0,
+              0.2,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "colt pistol",
+              0,
+              0,
+              0,
+              0,
+              0,
+              152,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "counters": {
+          "melee": 0
+        }
+      }
+    },
+    {
+      "name": "key q",
+      "after": {
+        "controls": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "enabled": true,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "Touch t509",
+          "nativeMovement": null,
+          "position": {
+            "x": 600,
+            "y": 3272
+          }
+        },
+        "player": [
+          0,
+          3,
+          14051,
+          0,
+          1,
+          14047,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          72.5,
+          72.5,
+          100,
+          77.5,
+          11,
+          12133,
+          1,
+          12136,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          5,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15384,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          100,
+          0,
+          0
+        ],
+        "vars": [
+          {
+            "name": "Reloading_mag",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_maxpage",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_lastpage",
+            "data": 0
+          },
+          {
+            "name": "bb_gui",
+            "data": 0
+          },
+          {
+            "name": "bow_ammo",
+            "data": 0
+          },
+          {
+            "name": "3g_ammo",
+            "data": 0
+          },
+          {
+            "name": "pickpile_scroll_pos",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time_melee",
+            "data": 0
+          },
+          {
+            "name": "inventory_reloader",
+            "data": 0
+          },
+          {
+            "name": "Inventory_opened",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter_loop",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_chooser",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_on",
+            "data": 0
+          },
+          {
+            "name": "tutor_inventory_guide_step",
+            "data": -1
+          },
+          {
+            "name": "mareloadtime",
+            "data": 0
+          },
+          {
+            "name": "reloading_pellets",
+            "data": 0
+          }
+        ],
+        "weapons": [
+          {
+            "uid": 14047,
+            "type": 33,
+            "cc": [
+              1,
+              0,
+              0,
+              0,
+              1.5,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "Split Axe",
+              0,
+              0,
+              0,
+              0,
+              0,
+              202,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 14051,
+            "type": 45,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              0,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "m4",
+              0,
+              0,
+              0,
+              0,
+              0,
+              158,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 15384,
+            "type": 71,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              0.2,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "colt pistol",
+              0,
+              0,
+              0,
+              0,
+              0,
+              152,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "counters": {
+          "melee": 0
+        }
+      }
+    },
+    {
+      "name": "key 2",
+      "after": {
+        "controls": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "enabled": true,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "Switch_to_firearm",
+          "nativeMovement": null,
+          "position": {
+            "x": 600,
+            "y": 3272
+          }
+        },
+        "player": [
+          0,
+          3,
+          14051,
+          1,
+          1,
+          14047,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          72.5,
+          72.5,
+          100,
+          77.5,
+          11,
+          12133,
+          1,
+          12136,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          5,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15384,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          100,
+          0,
+          0
+        ],
+        "vars": [
+          {
+            "name": "Reloading_mag",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_maxpage",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_lastpage",
+            "data": 0
+          },
+          {
+            "name": "bb_gui",
+            "data": 0
+          },
+          {
+            "name": "bow_ammo",
+            "data": 0
+          },
+          {
+            "name": "3g_ammo",
+            "data": 0
+          },
+          {
+            "name": "pickpile_scroll_pos",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time_melee",
+            "data": 0
+          },
+          {
+            "name": "inventory_reloader",
+            "data": 0
+          },
+          {
+            "name": "Inventory_opened",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter_loop",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_chooser",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_on",
+            "data": 0
+          },
+          {
+            "name": "tutor_inventory_guide_step",
+            "data": -1
+          },
+          {
+            "name": "mareloadtime",
+            "data": 0
+          },
+          {
+            "name": "reloading_pellets",
+            "data": 0
+          }
+        ],
+        "weapons": [
+          {
+            "uid": 14047,
+            "type": 33,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              1.5,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "Split Axe",
+              0,
+              0,
+              0,
+              0,
+              0,
+              202,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 14051,
+            "type": 45,
+            "cc": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "m4",
+              0,
+              0,
+              0,
+              0,
+              0,
+              158,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 15384,
+            "type": 71,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              0.2,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "colt pistol",
+              0,
+              0,
+              0,
+              0,
+              0,
+              152,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "counters": {
+          "melee": 0
+        }
+      }
+    },
+    {
+      "name": "initial reload begins",
+      "after": {
+        "controls": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "enabled": true,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "Touch t522",
+          "nativeMovement": null,
+          "position": {
+            "x": 600,
+            "y": 3272
+          }
+        },
+        "player": [
+          0,
+          3,
+          14051,
+          1,
+          1,
+          14047,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          72.5,
+          72.5,
+          100,
+          77.5,
+          11,
+          12133,
+          1,
+          12136,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          5,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15384,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          100,
+          0,
+          0
+        ],
+        "vars": [
+          {
+            "name": "Reloading_mag",
+            "data": 1
+          },
+          {
+            "name": "gui_pickpile_maxpage",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_lastpage",
+            "data": 0
+          },
+          {
+            "name": "bb_gui",
+            "data": 0
+          },
+          {
+            "name": "bow_ammo",
+            "data": 0
+          },
+          {
+            "name": "3g_ammo",
+            "data": 0
+          },
+          {
+            "name": "pickpile_scroll_pos",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time_melee",
+            "data": 0
+          },
+          {
+            "name": "inventory_reloader",
+            "data": 0
+          },
+          {
+            "name": "Inventory_opened",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter_loop",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_chooser",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_on",
+            "data": 0
+          },
+          {
+            "name": "tutor_inventory_guide_step",
+            "data": -1
+          },
+          {
+            "name": "mareloadtime",
+            "data": 2.5
+          },
+          {
+            "name": "reloading_pellets",
+            "data": 0
+          }
+        ],
+        "weapons": [
+          {
+            "uid": 14047,
+            "type": 33,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              1.5,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "Split Axe",
+              0,
+              0,
+              0,
+              0,
+              0,
+              202,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 14051,
+            "type": 45,
+            "cc": [
+              1,
+              0,
+              0,
+              30,
+              0,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "m4",
+              0,
+              0,
+              0,
+              0,
+              0,
+              158,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 15384,
+            "type": 71,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              0.2,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "colt pistol",
+              0,
+              0,
+              0,
+              0,
+              0,
+              152,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "counters": {
+          "melee": 0
+        }
+      }
+    },
+    {
+      "name": "initial native reload",
+      "after": {
+        "controls": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "enabled": true,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "Touch t522",
+          "nativeMovement": null,
+          "position": {
+            "x": 600,
+            "y": 3272
+          }
+        },
+        "player": [
+          0,
+          3,
+          14051,
+          1,
+          1,
+          14047,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          72.5,
+          72.5,
+          100,
+          77.5,
+          11,
+          12133,
+          1,
+          12136,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          5,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15384,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          100,
+          0,
+          0
+        ],
+        "vars": [
+          {
+            "name": "Reloading_mag",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_maxpage",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_lastpage",
+            "data": 0
+          },
+          {
+            "name": "bb_gui",
+            "data": 0
+          },
+          {
+            "name": "bow_ammo",
+            "data": 0
+          },
+          {
+            "name": "3g_ammo",
+            "data": 0
+          },
+          {
+            "name": "pickpile_scroll_pos",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time_melee",
+            "data": 0
+          },
+          {
+            "name": "inventory_reloader",
+            "data": 0
+          },
+          {
+            "name": "Inventory_opened",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter_loop",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_chooser",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_on",
+            "data": 0
+          },
+          {
+            "name": "tutor_inventory_guide_step",
+            "data": -1
+          },
+          {
+            "name": "mareloadtime",
+            "data": 2.5
+          },
+          {
+            "name": "reloading_pellets",
+            "data": 0
+          }
+        ],
+        "weapons": [
+          {
+            "uid": 14047,
+            "type": 33,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              1.5,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "Split Axe",
+              0,
+              0,
+              0,
+              0,
+              0,
+              202,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 14051,
+            "type": 45,
+            "cc": [
+              1,
+              0,
+              0,
+              30,
+              0,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "m4",
+              0,
+              0,
+              0,
+              0,
+              0,
+              158,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 15384,
+            "type": 71,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              0.2,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "colt pistol",
+              0,
+              0,
+              0,
+              0,
+              0,
+              152,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "counters": {
+          "melee": 0
+        }
+      }
+    },
+    {
+      "name": "remapped Space",
+      "after": {
+        "controls": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "enabled": true,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "Touch t522",
+          "nativeMovement": null,
+          "position": {
+            "x": 600,
+            "y": 3272
+          }
+        },
+        "player": [
+          0,
+          3,
+          14051,
+          1,
+          1,
+          14047,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          72,
+          72,
+          100,
+          78,
+          11,
+          12133,
+          1,
+          12136,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          5,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15384,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          100,
+          0,
+          0
+        ],
+        "vars": [
+          {
+            "name": "Reloading_mag",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_maxpage",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_lastpage",
+            "data": 0
+          },
+          {
+            "name": "bb_gui",
+            "data": 0
+          },
+          {
+            "name": "bow_ammo",
+            "data": 0
+          },
+          {
+            "name": "3g_ammo",
+            "data": 0
+          },
+          {
+            "name": "pickpile_scroll_pos",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time_melee",
+            "data": 0
+          },
+          {
+            "name": "inventory_reloader",
+            "data": 0
+          },
+          {
+            "name": "Inventory_opened",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter_loop",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_chooser",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_on",
+            "data": 0
+          },
+          {
+            "name": "tutor_inventory_guide_step",
+            "data": -1
+          },
+          {
+            "name": "mareloadtime",
+            "data": 2.5
+          },
+          {
+            "name": "reloading_pellets",
+            "data": 0
+          }
+        ],
+        "weapons": [
+          {
+            "uid": 14047,
+            "type": 33,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              1.5,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "Split Axe",
+              0,
+              0,
+              0,
+              0,
+              0,
+              202,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 14051,
+            "type": 45,
+            "cc": [
+              1,
+              0,
+              0,
+              30,
+              0,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "m4",
+              0,
+              0,
+              0,
+              0,
+              0,
+              158,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 15384,
+            "type": 71,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              0.2,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "colt pistol",
+              0,
+              0,
+              0,
+              0,
+              0,
+              152,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "counters": {
+          "melee": 0
+        }
+      }
+    },
+    {
+      "name": "remapped F",
+      "after": {
+        "controls": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "enabled": true,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "Touch t505",
+          "nativeMovement": null,
+          "position": {
+            "x": 600,
+            "y": 3272
+          }
+        },
+        "player": [
+          0,
+          3,
+          14051,
+          1,
+          1,
+          14047,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          72,
+          72,
+          100,
+          78,
+          11,
+          12133,
+          1,
+          12136,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          5,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15384,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          100,
+          0,
+          0
+        ],
+        "vars": [
+          {
+            "name": "Reloading_mag",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_maxpage",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_lastpage",
+            "data": 0
+          },
+          {
+            "name": "bb_gui",
+            "data": 0
+          },
+          {
+            "name": "bow_ammo",
+            "data": 0
+          },
+          {
+            "name": "3g_ammo",
+            "data": 0
+          },
+          {
+            "name": "pickpile_scroll_pos",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time_melee",
+            "data": 0
+          },
+          {
+            "name": "inventory_reloader",
+            "data": 0
+          },
+          {
+            "name": "Inventory_opened",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter_loop",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_chooser",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_on",
+            "data": 0
+          },
+          {
+            "name": "tutor_inventory_guide_step",
+            "data": -1
+          },
+          {
+            "name": "mareloadtime",
+            "data": 2.5
+          },
+          {
+            "name": "reloading_pellets",
+            "data": 0
+          }
+        ],
+        "weapons": [
+          {
+            "uid": 14047,
+            "type": 33,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              1.5,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "Split Axe",
+              0,
+              0,
+              0,
+              0,
+              0,
+              202,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 14051,
+            "type": 45,
+            "cc": [
+              1,
+              0,
+              0,
+              26,
+              0,
+              -1,
+              99.19999999999999,
+              0,
+              0,
+              0,
+              "m4",
+              0,
+              0,
+              0,
+              0,
+              0,
+              158,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 15384,
+            "type": 71,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              0.2,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "colt pistol",
+              0,
+              0,
+              0,
+              0,
+              0,
+              152,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "counters": {
+          "melee": 0
+        }
+      }
+    },
+    {
+      "name": "Space held",
+      "after": {
+        "controls": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": true,
+          "enabled": true,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "Touch t505",
+          "nativeMovement": null,
+          "position": {
+            "x": 600,
+            "y": 3272
+          }
+        },
+        "player": [
+          0,
+          3,
+          14051,
+          1,
+          1,
+          14047,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          71.5,
+          71.5,
+          100,
+          78.5,
+          11,
+          12133,
+          1,
+          12136,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          5,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15384,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          100,
+          0,
+          0
+        ],
+        "vars": [
+          {
+            "name": "Reloading_mag",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_maxpage",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_lastpage",
+            "data": 0
+          },
+          {
+            "name": "bb_gui",
+            "data": 0
+          },
+          {
+            "name": "bow_ammo",
+            "data": 0
+          },
+          {
+            "name": "3g_ammo",
+            "data": 0
+          },
+          {
+            "name": "pickpile_scroll_pos",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time_melee",
+            "data": 0
+          },
+          {
+            "name": "inventory_reloader",
+            "data": 0
+          },
+          {
+            "name": "Inventory_opened",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter_loop",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_chooser",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_on",
+            "data": 0
+          },
+          {
+            "name": "tutor_inventory_guide_step",
+            "data": -1
+          },
+          {
+            "name": "mareloadtime",
+            "data": 2.5
+          },
+          {
+            "name": "reloading_pellets",
+            "data": 0
+          }
+        ],
+        "weapons": [
+          {
+            "uid": 14047,
+            "type": 33,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              1.5,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "Split Axe",
+              0,
+              0,
+              0,
+              0,
+              0,
+              202,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 14051,
+            "type": 45,
+            "cc": [
+              1,
+              0,
+              0,
+              22,
+              0,
+              -1,
+              97.59999999999997,
+              0,
+              0,
+              0,
+              "m4",
+              0,
+              0,
+              0,
+              0,
+              0,
+              158,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 15384,
+            "type": 71,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              0.2,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "colt pistol",
+              0,
+              0,
+              0,
+              0,
+              0,
+              152,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "counters": {
+          "melee": 0
+        }
+      }
+    },
+    {
+      "name": "R begin",
+      "after": {
+        "controls": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "enabled": true,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "Touch t522",
+          "nativeMovement": null,
+          "position": {
+            "x": 600,
+            "y": 3272
+          }
+        },
+        "player": [
+          0,
+          3,
+          14051,
+          1,
+          1,
+          14047,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          71.5,
+          71.5,
+          100,
+          78.5,
+          11,
+          12133,
+          1,
+          12136,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          5,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15384,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          100,
+          0,
+          0
+        ],
+        "vars": [
+          {
+            "name": "Reloading_mag",
+            "data": 1
+          },
+          {
+            "name": "gui_pickpile_maxpage",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_lastpage",
+            "data": 0
+          },
+          {
+            "name": "bb_gui",
+            "data": 0
+          },
+          {
+            "name": "bow_ammo",
+            "data": 0
+          },
+          {
+            "name": "3g_ammo",
+            "data": 0
+          },
+          {
+            "name": "pickpile_scroll_pos",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time_melee",
+            "data": 0
+          },
+          {
+            "name": "inventory_reloader",
+            "data": 0
+          },
+          {
+            "name": "Inventory_opened",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter_loop",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_chooser",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_on",
+            "data": 0
+          },
+          {
+            "name": "tutor_inventory_guide_step",
+            "data": -1
+          },
+          {
+            "name": "mareloadtime",
+            "data": 2.5
+          },
+          {
+            "name": "reloading_pellets",
+            "data": 0
+          }
+        ],
+        "weapons": [
+          {
+            "uid": 14047,
+            "type": 33,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              1.5,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "Split Axe",
+              0,
+              0,
+              0,
+              0,
+              0,
+              202,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 14051,
+            "type": 45,
+            "cc": [
+              1,
+              0,
+              0,
+              30,
+              0,
+              -1,
+              97.19999999999996,
+              0,
+              0,
+              0,
+              "m4",
+              0,
+              0,
+              0,
+              0,
+              0,
+              158,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 15384,
+            "type": 71,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              0.2,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "colt pistol",
+              0,
+              0,
+              0,
+              0,
+              0,
+              152,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "counters": {
+          "melee": 0
+        }
+      }
+    },
+    {
+      "name": "Space during reload",
+      "after": {
+        "controls": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": true,
+          "enabled": true,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "Touch t505",
+          "nativeMovement": null,
+          "position": {
+            "x": 600,
+            "y": 3272
+          }
+        },
+        "player": [
+          0,
+          3,
+          14051,
+          1,
+          1,
+          14047,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          71.5,
+          71.5,
+          100,
+          78.5,
+          11,
+          12133,
+          1,
+          12136,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          5,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15384,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          100,
+          0,
+          0
+        ],
+        "vars": [
+          {
+            "name": "Reloading_mag",
+            "data": 1
+          },
+          {
+            "name": "gui_pickpile_maxpage",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_lastpage",
+            "data": 0
+          },
+          {
+            "name": "bb_gui",
+            "data": 0
+          },
+          {
+            "name": "bow_ammo",
+            "data": 0
+          },
+          {
+            "name": "3g_ammo",
+            "data": 0
+          },
+          {
+            "name": "pickpile_scroll_pos",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time_melee",
+            "data": 0
+          },
+          {
+            "name": "inventory_reloader",
+            "data": 0
+          },
+          {
+            "name": "Inventory_opened",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter_loop",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_chooser",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_on",
+            "data": 0
+          },
+          {
+            "name": "tutor_inventory_guide_step",
+            "data": -1
+          },
+          {
+            "name": "mareloadtime",
+            "data": 2.5
+          },
+          {
+            "name": "reloading_pellets",
+            "data": 0
+          }
+        ],
+        "weapons": [
+          {
+            "uid": 14047,
+            "type": 33,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              1.5,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "Split Axe",
+              0,
+              0,
+              0,
+              0,
+              0,
+              202,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 14051,
+            "type": 45,
+            "cc": [
+              1,
+              0,
+              0,
+              30,
+              0,
+              -1,
+              97.19999999999996,
+              0,
+              0,
+              0,
+              "m4",
+              0,
+              0,
+              0,
+              0,
+              0,
+              158,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 15384,
+            "type": 71,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              0.2,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "colt pistol",
+              0,
+              0,
+              0,
+              0,
+              0,
+              152,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "counters": {
+          "melee": 0
+        }
+      }
+    },
+    {
+      "name": "R finished",
+      "after": {
+        "controls": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": false,
+          "enabled": true,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "Touch t505",
+          "nativeMovement": null,
+          "position": {
+            "x": 600,
+            "y": 3272
+          }
+        },
+        "player": [
+          0,
+          3,
+          14051,
+          1,
+          1,
+          14047,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          71.5,
+          71.5,
+          100,
+          78.5,
+          11,
+          12133,
+          1,
+          12136,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          5,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15384,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          100,
+          0,
+          0
+        ],
+        "vars": [
+          {
+            "name": "Reloading_mag",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_maxpage",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_lastpage",
+            "data": 0
+          },
+          {
+            "name": "bb_gui",
+            "data": 0
+          },
+          {
+            "name": "bow_ammo",
+            "data": 0
+          },
+          {
+            "name": "3g_ammo",
+            "data": 0
+          },
+          {
+            "name": "pickpile_scroll_pos",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time_melee",
+            "data": 0
+          },
+          {
+            "name": "inventory_reloader",
+            "data": 0
+          },
+          {
+            "name": "Inventory_opened",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter_loop",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_chooser",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_on",
+            "data": 0
+          },
+          {
+            "name": "tutor_inventory_guide_step",
+            "data": -1
+          },
+          {
+            "name": "mareloadtime",
+            "data": 2.5
+          },
+          {
+            "name": "reloading_pellets",
+            "data": 0
+          }
+        ],
+        "weapons": [
+          {
+            "uid": 14047,
+            "type": 33,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              1.5,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "Split Axe",
+              0,
+              0,
+              0,
+              0,
+              0,
+              202,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 14051,
+            "type": 45,
+            "cc": [
+              1,
+              0,
+              0,
+              30,
+              0,
+              -1,
+              97.19999999999996,
+              0,
+              0,
+              0,
+              "m4",
+              0,
+              0,
+              0,
+              0,
+              0,
+              158,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 15384,
+            "type": 71,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              0.2,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "colt pistol",
+              0,
+              0,
+              0,
+              0,
+              0,
+              152,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "counters": {
+          "melee": 0
+        }
+      }
+    },
+    {
+      "name": "melee Space near enemy",
+      "enemy": {
+        "uid": 16567,
+        "type": 547,
+        "originalValues": [
+          0,
+          0,
+          0,
+          0,
+          100,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          100,
+          0
+        ]
+      },
+      "after": {
+        "controls": {
+          "state": "GAMEPLAY",
+          "movement": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "attack": true,
+          "enabled": true,
+          "controlMethod": "Native AltMove actions / C2 Function / native Touch handler",
+          "lastAction": "Native Melee_2_auto event (original target/range/cooldown)",
+          "nativeMovement": null,
+          "position": {
+            "x": 600,
+            "y": 3272
+          }
+        },
+        "player": [
+          0,
+          3,
+          14051,
+          0,
+          1,
+          14047,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          71,
+          71,
+          100,
+          79,
+          11,
+          12133,
+          1,
+          12136,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          5,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          15384,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          100,
+          0,
+          0
+        ],
+        "vars": [
+          {
+            "name": "Reloading_mag",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_maxpage",
+            "data": 0
+          },
+          {
+            "name": "gui_pickpile_lastpage",
+            "data": 0
+          },
+          {
+            "name": "bb_gui",
+            "data": 0
+          },
+          {
+            "name": "bow_ammo",
+            "data": 0
+          },
+          {
+            "name": "3g_ammo",
+            "data": 0
+          },
+          {
+            "name": "pickpile_scroll_pos",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time",
+            "data": 0
+          },
+          {
+            "name": "Reloading_time_melee",
+            "data": 1
+          },
+          {
+            "name": "inventory_reloader",
+            "data": 0
+          },
+          {
+            "name": "Inventory_opened",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter_loop",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_counter",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_chooser",
+            "data": 0
+          },
+          {
+            "name": "Action_menu_on",
+            "data": 0
+          },
+          {
+            "name": "tutor_inventory_guide_step",
+            "data": -1
+          },
+          {
+            "name": "mareloadtime",
+            "data": 2.5
+          },
+          {
+            "name": "reloading_pellets",
+            "data": 0
+          }
+        ],
+        "weapons": [
+          {
+            "uid": 14047,
+            "type": 33,
+            "cc": [
+              1,
+              0,
+              0,
+              0,
+              1.5,
+              -1,
+              99.5,
+              0,
+              0,
+              0,
+              "Split Axe",
+              0,
+              0,
+              0,
+              0,
+              0,
+              202,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 14051,
+            "type": 45,
+            "cc": [
+              1,
+              0,
+              1,
+              30,
+              0,
+              -1,
+              97.19999999999996,
+              0,
+              0,
+              0,
+              "m4",
+              0,
+              0,
+              0,
+              0,
+              0,
+              158,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "uid": 15384,
+            "type": 71,
+            "cc": [
+              1,
+              0,
+              1,
+              0,
+              0.2,
+              -1,
+              100,
+              0,
+              0,
+              0,
+              "colt pistol",
+              0,
+              0,
+              0,
+              0,
+              0,
+              152,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "counters": {
+          "melee": 1
+        }
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "original mouse drag",
+      "pass": true,
+      "evidence": {
+        "uid": 3106,
+        "x": 853.2849982754315,
+        "y": 437.29499416258045,
+        "behavior": "GUI_Drag"
+      }
+    },
+    {
+      "name": "E equips melee",
+      "pass": true
+    },
+    {
+      "name": "E equips primary",
+      "pass": true
+    },
+    {
+      "name": "E equips secondary",
+      "pass": true
+    },
+    {
+      "name": "key 1",
+      "pass": true
+    },
+    {
+      "name": "key 2",
+      "pass": true
+    },
+    {
+      "name": "key 3",
+      "pass": true
+    },
+    {
+      "name": "key q",
+      "pass": true
+    },
+    {
+      "name": "reload begins",
+      "pass": true
+    },
+    {
+      "name": "reload finishes",
+      "pass": true
+    },
+    {
+      "name": "custom binding Space no attack",
+      "pass": true
+    },
+    {
+      "name": "custom binding F attacks",
+      "pass": true
+    },
+    {
+      "name": "native ammo loaded",
+      "pass": true
+    },
+    {
+      "name": "Space consumes primary ammo",
+      "pass": true
+    },
+    {
+      "name": "reload blocks firing",
+      "pass": true
+    },
+    {
+      "name": "reload respects magazine",
+      "pass": true
+    },
+    {
+      "name": "melee swing created",
+      "pass": true
+    },
+    {
+      "name": "melee original event requested",
+      "pass": true
+    }
+  ],
+  "ammoEvidence": {
+    "loaded": 30,
+    "afterSpace": 22,
+    "afterReload": 30
+  },
+  "passed": true
+}

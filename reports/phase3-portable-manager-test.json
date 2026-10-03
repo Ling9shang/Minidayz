@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "portable": true,
+  "checks": [
+    {
+      "name": "F2 Settings",
+      "pass": true
+    },
+    {
+      "name": "renderer isolation",
+      "pass": true
+    },
+    {
+      "name": "Export hash",
+      "pass": true
+    },
+    {
+      "name": "Import",
+      "pass": true
+    },
+    {
+      "name": "pre-import backup",
+      "pass": true
+    },
+    {
+      "name": "Restore backup",
+      "pass": true
+    },
+    {
+      "name": "pre-restore backup",
+      "pass": true
+    },
+    {
+      "name": "Manual backup",
+      "pass": true
+    },
+    {
+      "name": "Keyboard hot update",
+      "pass": true
+    },
+    {
+      "name": "Settings restart",
+      "pass": true
+    },
+    {
+      "name": "Imported storage restart",
+      "pass": true
+    },
+    {
+      "name": "Auto backups",
+      "pass": true
+    },
+    {
+      "name": "Keyboard injected",
+      "pass": true
+    },
+    {
+      "name": "Folder destinations",
+      "pass": true
+    },
+    {
+      "name": "Imported native save Continue",
+      "pass": true
+    },
+    {
+      "name": "Temporary staging cleaned",
+      "pass": true
+    }
+  ],
+  "archiveSize": 1161781,
+  "nativeFileDialogs": "test profile selects fixed local paths; production uses Save/Open Dialog",
+  "environment": "portable",
+  "testedAt": "2026-10-02T21:23:35.135Z"
+}

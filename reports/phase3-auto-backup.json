@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "startup": true,
+  "changedShutdown": true,
+  "unchangedRestartSkipped": true,
+  "crashRecovery": true,
+  "environment": "portable",
+  "testedAt": "2026-10-02T21:29:57.668Z"
+}

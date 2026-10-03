@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "errors": [],
+  "externalRequests": [],
+  "storage": {
+    "localStorage": [],
+    "indexedDB": "object"
+  },
+  "scope": "Startup only; actual offline gameplay, save and restart are covered by phase2-gameplay-test.json"
+}

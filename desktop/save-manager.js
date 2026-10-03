@@ -1,0 +1,33 @@
+'use strict';
+const fs=require('fs'),path=require('path'),crypto=require('crypto');
+const {session}=require('electron');
+const archive=require('./save-archive');const {atomicWrite}=require('./config-store');
+class SaveManager{
+ constructor({userData,desktopVersion,storage,config,getGame,closeGame,reopenGame}){Object.assign(this,{userData,desktopVersion,storage,config,getGame,closeGame,reopenGame});this.dir=path.join(userData,'backups');this.journal=path.join(userData,'save-transaction.json');this.pending=Promise.resolve();}
+ run(fn){const next=this.pending.then(fn);this.pending=next.catch(()=>{});return next;}
+ async pause(){const w=this.getGame();if(!w||w.isDestroyed())return()=>{};const prior=await w.webContents.executeJavaScript('(()=>{window.__MINIDAYZ_PC_CONTROLS?.reset();const r=window.cr_getC2Runtime?.();const prior=r?.sl;window.cr_setSuspended?.(true);return prior;})()');return async()=>{if(!w.isDestroyed()&&!prior)await w.webContents.executeJavaScript('window.cr_setSuspended?.(false)');};}
+ exists(snapshot){return snapshot.indexedDB.some(d=>d.stores.some(s=>s.entries.length))||Object.keys(snapshot.localStorage).length>0;}
+ writeBackup(snapshot,source){const {buffer,manifest}=archive.pack(snapshot,this.desktopVersion,source);fs.mkdirSync(this.dir,{recursive:true});const stamp=new Date().toISOString().replace(/[:.]/g,'-'),name=`${source}-${stamp}-${crypto.randomUUID().slice(0,8)}.mdczsave`,file=path.join(this.dir,name);atomicWrite(file,buffer);return {name,path:file,size:buffer.length,createdAt:manifest.createdAt,source,gameVersion:manifest.gameVersion,logicalSaveHash:manifest.logicalSaveHash};}
+ list(){if(!fs.existsSync(this.dir))return [];const result=[];for(const name of fs.readdirSync(this.dir)){if(!/^(auto|manual|pre-import|pre-restore)-\d{4}-\d{2}-\d{2}T[\d-]+Z-[a-f0-9]{8}\.mdczsave$/.test(name))continue;const file=path.join(this.dir,name);try{const stat=fs.lstatSync(file);if(!stat.isFile()||stat.isSymbolicLink()||stat.size>archive.LIMIT)continue;const {manifest}=archive.unpack(fs.readFileSync(file));const source=name.split('-')[0]==='pre'?name.startsWith('pre-import')?'pre-import':'pre-restore':name.split('-')[0];if(manifest.source!==source)continue;result.push({name,size:stat.size,createdAt:manifest.createdAt,source:manifest.source,gameVersion:manifest.gameVersion,logicalSaveHash:manifest.logicalSaveHash});}catch{/* Unrecognized or damaged files are preserved, never rotated. */}}return result.sort((a,b)=>b.createdAt.localeCompare(a.createdAt)||b.name.localeCompare(a.name));}
+ rotate(){const auto=this.list().filter(b=>b.source==='auto');for(const b of auto.slice(this.config.effective.maxBackups))fs.unlinkSync(path.join(this.dir,b.name));}
+ async backup(source='manual'){return this.run(async()=>{const resume=await this.pause();try{const snapshot=await this.storage.read();if(!this.exists(snapshot))return {skipped:true,message:'还没有可备份的存档'};const digest=archive.hash(archive.stable(snapshot));if(source==='auto'&&this.list().filter(b=>b.source==='auto')[0]?.logicalSaveHash===digest){this.rotate();return {skipped:true,message:'存档未变化'};}const result=this.writeBackup(snapshot,source);if(source==='auto')this.rotate();return result;}finally{await resume();}});}
+ async exportTo(file){return this.run(async()=>{const resume=await this.pause();try{const snapshot=await this.storage.read();if(!this.exists(snapshot))throw Error('还没有可导出的存档');const data=archive.pack(snapshot,this.desktopVersion,'manual-export');atomicWrite(file,data.buffer);return {path:file,size:data.buffer.length,hash:data.manifest.logicalSaveHash};}finally{await resume();}});}
+ validateFile(file){const stat=fs.lstatSync(file);if(!stat.isFile()||stat.size>archive.LIMIT)throw Error('Save file is corrupted: size');return archive.unpack(fs.readFileSync(file));}
+ async importFrom(file,{source='pre-import',allowUnknown=false}={}){return this.run(async()=>{
+  this.validateFile(file);
+  fs.mkdirSync(this.userData,{recursive:true});const stage=fs.mkdtempSync(path.join(this.userData,'save-stage-'));
+  try{const entries=archive.unzip(fs.readFileSync(file));for(const [name,data]of Object.entries(entries)){const target=path.join(stage,...name.split('/'));fs.mkdirSync(path.dirname(target),{recursive:true});atomicWrite(target,data);}
+  const staged={};for(const name of ['manifest.json','storage/indexeddb/records.json','storage/localstorage/values.json'])staged[name]=fs.readFileSync(path.join(stage,...name.split('/')));const incoming=archive.unpack(archive.zip(staged));if(incoming.compatibility!=='same-game-version'&&!allowUnknown)throw Error('unknown-game-version: 请明确确认兼容性风险');
+  await this.pause();await this.closeGame();session.defaultSession.flushStorageData();let before,backup;
+  try{before=await this.storage.read();backup=this.writeBackup(before,source);atomicWrite(this.journal,JSON.stringify({format:1,backup:backup.name}));
+   await this.storage.write(incoming.snapshot);
+   if(process.env.MINIDAYZ_TEST_MODE==='1'&&process.env.MINIDAYZ_TEST_USERDATA&&process.env.MINIDAYZ_TEST_IMPORT_FAILURE==='after-write')throw Error('测试注入：写入后失败');
+   const actual=await this.storage.read();if(archive.hash(archive.stable(actual))!==incoming.manifest.logicalSaveHash)throw Error('导入校验失败');fs.unlinkSync(this.journal);return {restored:true,backup:backup.name,compatibility:incoming.compatibility,hash:incoming.manifest.logicalSaveHash};
+  }catch(error){if(before){try{await this.storage.write(before);if(archive.hash(archive.stable(await this.storage.read()))!==archive.hash(archive.stable(before)))throw Error('恢复校验失败');if(fs.existsSync(this.journal))fs.unlinkSync(this.journal);}catch(rollback){throw Error(`${error.message}；回滚未完成：${rollback.message}。已保留恢复日志和备份，请勿继续游戏。`);}}throw error;
+  }finally{if(!fs.existsSync(this.journal))await this.reopenGame();}
+  }finally{fs.rmSync(stage,{recursive:true,force:true});}
+ });}
+ async recover(){if(!fs.existsSync(this.journal))return;const transaction=JSON.parse(fs.readFileSync(this.journal,'utf8'));if(transaction.format!==1||typeof transaction.backup!=='string')throw Error('恢复日志格式错误');if(!this.list().some(b=>b.name===transaction.backup))throw Error('恢复日志中的备份无效；暂不打开游戏');const data=this.validateFile(path.join(this.dir,transaction.backup));await this.storage.write(data.snapshot);if(archive.hash(archive.stable(await this.storage.read()))!==data.manifest.logicalSaveHash)throw Error('崩溃恢复校验失败');fs.unlinkSync(this.journal);}
+ restore(name){if(typeof name!=='string'||!this.list().some(b=>b.name===name))throw Error('备份不存在或无效');return this.importFrom(path.join(this.dir,name),{source:'pre-restore'});}
+}
+module.exports={SaveManager};

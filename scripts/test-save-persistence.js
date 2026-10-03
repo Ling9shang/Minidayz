@@ -1,5 +1,5 @@
 const {_electron:electron}=require('playwright');const path=require('path'),fs=require('fs');
-const report=name=>path.join('reports',(process.env.MINIDAYZ_REPORT_PREFIX||'phase2-')+name);
+const report=name=>path.join('reports',(process.env.MINIDAYZ_REPORT_PREFIX||'phase3-')+name);
 const options={args:['.'],env:{...process.env,MINIDAYZ_TEST_USERDATA:path.resolve(report('test-profile'))}};
 (async()=>{
  let app=await electron.launch(options),page=await app.firstWindow();await page.waitForLoadState();

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "defaults": true,
+  "loadSave": true,
+  "corruptRecovery": true,
+  "typeValidation": true,
+  "boundaries": true,
+  "portableOverride": true,
+  "partialBindingOverride": true,
+  "migration": true,
+  "reservedAndDuplicateRejected": true
+}

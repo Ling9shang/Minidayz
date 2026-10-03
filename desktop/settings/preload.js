@@ -1,0 +1,3 @@
+'use strict';
+const {contextBridge,ipcRenderer}=require('electron');const invoke=(method,value)=>ipcRenderer.invoke('desktop-settings',method,value);
+contextBridge.exposeInMainWorld('desktopSettings',Object.freeze({getSettings:()=>invoke('getSettings'),saveSettings:settings=>invoke('saveSettings',settings),resetControls:()=>invoke('resetControls'),exportSave:()=>invoke('exportSave'),importSave:()=>invoke('importSave'),backupNow:()=>invoke('backupNow'),listBackups:()=>invoke('listBackups'),restoreBackup:name=>invoke('restoreBackup',name),openSaveFolder:()=>invoke('openSaveFolder'),openBackupFolder:()=>invoke('openBackupFolder')}));

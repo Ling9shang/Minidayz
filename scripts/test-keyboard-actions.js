@@ -2,7 +2,7 @@ const fs = require('fs');
 const {launch, ready, newGame} = require('./desktop-test-helpers');
 (async () => {
   const suffix = process.env.MINIDAYZ_TEST_PORTABLE ? 'portable' : process.env.MINIDAYZ_TEST_NPM_DEV ? 'dev' : 'electron';
-  const app = await launch(`phase2-combat-${suffix}-profile`);
+  const app = await launch(`phase3-combat-${suffix}-profile`);
   const result = {
     environment: suffix,
     fixturePolicy: 'Isolated profile: original Create object and Set instance variable actions supply native weapons, ammo IDs 11/12 and 60 test rounds. A native enemy is relocated or created with default stats. Production code creates no items and writes no ammo/health/damage.',
@@ -56,12 +56,23 @@ const {launch, ready, newGame} = require('./desktop-test-helpers');
     }
     await page.keyboard.press('r');await page.waitForTimeout(100);await record('initial reload begins');
     await page.waitForTimeout(3500);await record('initial native reload');
+    const {settingsPage,call}=require('./phase3-test-helpers');
+    let settings=await settingsPage(app);
+    await settings.locator('[data-action="attack"]').click();await settings.keyboard.press('f');
+    await settings.waitForFunction(async()=>{const r=await desktopSettings.getSettings();return r.result.settings.keybindings.attack[0]==='KeyF';});
+    await page.keyboard.down('Space');await page.waitForTimeout(350);await page.keyboard.up('Space');await record('remapped Space');
+    await page.keyboard.down('f');await page.waitForTimeout(350);await page.keyboard.up('f');await record('remapped F');
+    await settings.locator('#resetControls').click();await settings.waitForFunction(async()=>{const r=await desktopSettings.getSettings();return r.result.settings.keybindings.attack[0]==='Space';});
+    await page.keyboard.press('r');await page.waitForTimeout(3500);
+    await settings.screenshot({path:`reports/phase3-keybindings-${suffix}.png`});
+    await settings.close();
+
     await page.keyboard.down('Space');await page.waitForTimeout(700);await record('Space held');
-    await page.screenshot({path:`reports/phase2-shooting-${suffix}.png`});await page.keyboard.up('Space');
+    await page.screenshot({path:`reports/phase3-shooting-${suffix}.png`});await page.keyboard.up('Space');
     await page.keyboard.press('r');await page.waitForTimeout(100);await record('R begin');
     await page.keyboard.down('Space');await page.waitForTimeout(300);await record('Space during reload');await page.keyboard.up('Space');
     await page.waitForTimeout(3500);await record('R finished');
-    await page.screenshot({path:`reports/phase2-combat-${suffix}.png`});
+    await page.screenshot({path:`reports/phase3-combat-${suffix}.png`});
     await page.keyboard.press('Tab');await page.waitForTimeout(300);
     const drag = await page.evaluate(()=>{
       const r=cr_getC2Runtime(), rect=r.canvas.getBoundingClientRect();
@@ -91,7 +102,7 @@ const {launch, ready, newGame} = require('./desktop-test-helpers');
     });
     await page.keyboard.down('Space');await page.waitForTimeout(1200);
     result.steps.push({name:'melee Space near enemy',enemy,after:await snap()});await page.keyboard.up('Space');
-    await page.screenshot({path:`reports/phase2-melee-${suffix}.png`});
+    await page.screenshot({path:`reports/phase3-melee-${suffix}.png`});
     const step=name=>result.steps.find(s=>s.name===name).after;
     const rounds=name=>step(name).weapons.find(w=>w.type===45).cc[3];
     const reloading=name=>step(name).vars.find(v=>v.name==='Reloading_mag').data;
@@ -101,6 +112,8 @@ const {launch, ready, newGame} = require('./desktop-test-helpers');
     for(const [name,mode]of [['key 1',0],['key 2',1],['key 3',2],['key q',0]])check(name,step(name).player[3]===mode);
     check('reload begins',reloading('initial reload begins')===1&&reloading('R begin')===1);
     check('reload finishes',reloading('R finished')===0);
+    check('custom binding Space no attack',rounds('remapped Space')===30);
+    check('custom binding F attacks',rounds('remapped F')<30);
     check('native ammo loaded',rounds('initial native reload')===30);
     check('Space consumes primary ammo',rounds('Space held')<rounds('initial native reload'));
     check('reload blocks firing',rounds('Space during reload')===rounds('R begin'));
@@ -109,12 +122,9 @@ const {launch, ready, newGame} = require('./desktop-test-helpers');
     check('melee original event requested',step('melee Space near enemy').controls.lastAction.includes('Melee_2_auto'));
     result.ammoEvidence={loaded:rounds('initial native reload'),afterSpace:rounds('Space held'),afterReload:rounds('R finished')};
     result.passed=result.checks.every(c=>c.pass)&&!result.errors.length&&!result.externalRequests.length;
-    fs.writeFileSync('reports/phase2-combat-test.json',JSON.stringify(result,null,2));
-    fs.writeFileSync(`reports/phase2-combat-${suffix}-test.json`,JSON.stringify(result,null,2));
+    fs.writeFileSync('reports/phase3-combat-test.json',JSON.stringify(result,null,2));
+    fs.writeFileSync(`reports/phase3-combat-${suffix}-test.json`,JSON.stringify(result,null,2));
     console.log(result.checks.map(c=>`${c.pass?'PASS':'FAIL'} ${c.name}`).join('\n'));console.log(result.ammoEvidence);
     if(!result.passed)process.exitCode=1;
   }finally{await app.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});
-
-
-
